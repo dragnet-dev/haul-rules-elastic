@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3526 — Recovery Inhibition (dragonforce)
+// Status: stable | Level: high | ID: f3dd9e75-418d-5207-839b-c2829a0f35ad
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")
