@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4042 — Mass File Rename (clop)
+// Status: experimental | Level: high | ID: 6eeb2a41-d387-5c6a-a9bf-90e8a593ddde
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

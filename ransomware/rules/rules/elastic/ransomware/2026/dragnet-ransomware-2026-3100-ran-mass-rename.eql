@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3100 — Mass File Rename (shadowbyt3$)
+// Status: deprecated | Level: high | ID: 0c132a37-1b69-55a8-87b3-366d600a71bb
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

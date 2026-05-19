@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1927 — Recovery Inhibition (pear)
+// Status: stable | Level: high | ID: a8a7d447-9b69-5757-96d3-55501bfef6c3
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2633 — Mass File Rename (secpo)
+// Status: stable | Level: high | ID: a70ea400-d849-58a1-9a1b-5d7b97799be3
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

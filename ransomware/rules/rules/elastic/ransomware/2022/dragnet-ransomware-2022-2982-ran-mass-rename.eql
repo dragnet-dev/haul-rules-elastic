@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2982 — Mass File Rename (everest)
+// Status: deprecated | Level: high | ID: 160ff3a2-e240-5310-a17f-727c5c9e19f6
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

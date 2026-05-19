@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0905 — Recovery Inhibition (tridentlocker)
+// Status: stable | Level: high | ID: 889173d4-077f-5d6b-9be9-8607b8e1de7d
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

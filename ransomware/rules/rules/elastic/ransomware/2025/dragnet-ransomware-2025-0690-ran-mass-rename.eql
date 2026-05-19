@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0690 — Mass File Rename (weyhro)
+// Status: experimental | Level: high | ID: cc2edb99-84db-5436-982c-88432ea73c6f
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

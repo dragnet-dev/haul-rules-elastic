@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1495 — Recovery Inhibition (nefilim)
+// Status: deprecated | Level: high | ID: 78432fa1-c4bd-553e-afd3-821a4a508df0
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7745 — Recovery Inhibition (alphalocker)
+// Status: experimental | Level: high | ID: 4ee28743-f73f-5045-9e1b-8fb916389cdc
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

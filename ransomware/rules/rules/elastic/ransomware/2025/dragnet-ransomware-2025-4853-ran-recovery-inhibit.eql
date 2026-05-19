@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4853 — Recovery Inhibition (IMNCrew)
+// Status: experimental | Level: high | ID: 79f4c547-9d72-5a9c-af7a-8c40954b5c7f
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

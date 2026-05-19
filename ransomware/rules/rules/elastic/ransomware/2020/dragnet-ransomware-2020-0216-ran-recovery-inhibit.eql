@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0216 — Recovery Inhibition (coldlock)
+// Status: deprecated | Level: high | ID: 46ebca86-f182-5bc2-a028-e9492bd2bb5c
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

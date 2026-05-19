@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6718 — Mass File Rename (gunra)
+// Status: experimental | Level: high | ID: 5dbc2247-6590-52db-9a23-a02af854d9d4
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

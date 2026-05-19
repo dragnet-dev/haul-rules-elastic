@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-4764 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: 29297a71-15c6-518f-8414-d760932d418b
+
+network where
+  destination.domain like~ "*http://kbsqoivihgdmwczmxkbovk7ss2dcynitwhhfu5yw725dboqo5kthfaad.onion/site/view?id=100*"

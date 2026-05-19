@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0950 — Mass File Rename (sabbath)
+// Status: deprecated | Level: high | ID: f5f8e915-c83d-5ce0-96c5-5e34028aa91c
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1767 — Recovery Inhibition (darkleakmarket)
+// Status: deprecated | Level: high | ID: b1fac0f8-0b22-56fd-8541-34d896aa2407
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

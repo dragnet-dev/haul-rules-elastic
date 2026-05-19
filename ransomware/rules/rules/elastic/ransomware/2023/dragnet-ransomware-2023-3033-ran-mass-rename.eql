@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3033 — Mass File Rename (medusa)
+// Status: deprecated | Level: high | ID: 4e4862a9-a126-503d-a2de-0b4e722dbff6
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2927 — Recovery Inhibition (lockbit5)
+// Status: stable | Level: high | ID: e9c74b45-266e-5c80-a5d4-899e82e7839c
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0764 — Mass File Rename (kraken)
+// Status: experimental | Level: high | ID: 3b7ce071-bca3-5d24-b767-5b163b76489f
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

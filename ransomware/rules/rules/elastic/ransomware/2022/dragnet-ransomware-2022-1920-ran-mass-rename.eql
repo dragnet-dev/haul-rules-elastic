@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1920 — Mass File Rename (bianlian)
+// Status: deprecated | Level: high | ID: 99f32c6a-8bbe-5561-8647-78db997d23b2
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

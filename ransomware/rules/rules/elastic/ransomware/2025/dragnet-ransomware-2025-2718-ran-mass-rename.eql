@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-2718 — Mass File Rename (walocker)
+// Status: experimental | Level: high | ID: cf515c89-71a9-5a58-99e2-6006c64e4666
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

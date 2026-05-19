@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0277 — Mass File Rename (alphalocker)
+// Status: experimental | Level: high | ID: 10e28391-c26b-581c-8adc-214b1837b5a6
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0058 — Recovery Inhibition (lockbit)
+// Status: deprecated | Level: high | ID: 637026fb-a5d1-5462-91ef-fe07ea667859
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

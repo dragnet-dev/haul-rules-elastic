@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0075 — Recovery Inhibition (xinglocker)
+// Status: deprecated | Level: high | ID: 2f0be3d5-fd7b-50ca-905f-e033fde84929
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-1349 — Mass File Rename (handala)
+// Status: experimental | Level: high | ID: 55cf0b27-aa00-53e4-af70-22fc4773e012
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

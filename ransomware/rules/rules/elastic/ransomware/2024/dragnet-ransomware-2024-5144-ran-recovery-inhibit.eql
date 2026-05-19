@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5144 — Recovery Inhibition (cactus)
+// Status: experimental | Level: high | ID: 5eab7999-a65d-5c69-9a7a-4078ca40533d
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

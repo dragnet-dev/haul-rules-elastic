@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0543 — Recovery Inhibition (LeakBazaar)
+// Status: stable | Level: high | ID: d59fe76d-7a19-5c60-af34-07bb7f9f4ee8
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

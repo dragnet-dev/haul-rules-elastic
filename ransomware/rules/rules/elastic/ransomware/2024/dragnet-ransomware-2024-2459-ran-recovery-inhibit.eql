@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-2459 — Recovery Inhibition (mogilevich)
+// Status: deprecated | Level: high | ID: 28c15897-e7c9-55ee-a46c-ef43adc2567a
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

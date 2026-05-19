@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4817 — Mass File Rename (monti)
+// Status: experimental | Level: high | ID: f8257abe-b89a-516f-ab03-cf71f8998144
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

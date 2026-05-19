@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1463 — Mass File Rename (pysa)
+// Status: deprecated | Level: high | ID: 4868537f-4336-5b6e-8802-bc14b5da9f2d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2525 — Mass File Rename (lorenz)
+// Status: deprecated | Level: high | ID: 2042ab3b-4c35-59ba-bb0d-2b5d33fbcfdc
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4897 — Recovery Inhibition (chort)
+// Status: experimental | Level: high | ID: db6d2bd1-0a25-592a-b8b7-19200c38922a
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

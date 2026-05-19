@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2744 — Recovery Inhibition (bravox)
+// Status: stable | Level: high | ID: 7095968d-6f72-59be-bd07-d2e4f9326eba
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4852 — Mass File Rename (IMNCrew)
+// Status: experimental | Level: high | ID: c91c8472-7bd7-564f-8bdb-26a794bdcf13
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

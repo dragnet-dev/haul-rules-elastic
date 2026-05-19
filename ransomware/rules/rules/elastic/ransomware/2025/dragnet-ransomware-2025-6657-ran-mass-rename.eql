@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6657 — Mass File Rename (play)
+// Status: experimental | Level: high | ID: cec05b7f-e5cb-50e5-8b8b-4933102fe715
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

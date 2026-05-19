@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6766 — Recovery Inhibition (qilin)
+// Status: experimental | Level: high | ID: 248dac8a-0e30-5711-99a5-5c6714b5e5e9
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

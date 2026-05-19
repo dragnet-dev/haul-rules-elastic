@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-3538 — Mass File Rename (killsec)
+// Status: experimental | Level: high | ID: 413fcbe1-698a-5d10-bb5b-ddda3c5c7211
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

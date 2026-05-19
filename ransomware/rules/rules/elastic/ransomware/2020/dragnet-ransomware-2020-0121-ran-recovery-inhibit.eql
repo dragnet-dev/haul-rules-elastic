@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0121 — Recovery Inhibition (egregor)
+// Status: deprecated | Level: high | ID: 34a365d4-8522-525b-8e66-27925e7f53a5
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

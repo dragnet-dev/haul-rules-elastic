@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3280 — Mass File Rename (nitrogen)
+// Status: experimental | Level: high | ID: 0287c6d1-0e12-5f7d-a378-65f99255d882
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

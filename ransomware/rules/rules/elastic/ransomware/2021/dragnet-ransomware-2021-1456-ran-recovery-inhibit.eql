@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1456 — Recovery Inhibition (hive)
+// Status: deprecated | Level: high | ID: d0e1356d-beda-5fa5-b609-79b933925f7e
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

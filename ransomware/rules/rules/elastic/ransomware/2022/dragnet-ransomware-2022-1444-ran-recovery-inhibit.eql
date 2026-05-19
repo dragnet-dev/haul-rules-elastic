@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1444 — Recovery Inhibition (cuba)
+// Status: deprecated | Level: high | ID: 48aeac1a-a7ec-5716-8d78-820b1c8aac01
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

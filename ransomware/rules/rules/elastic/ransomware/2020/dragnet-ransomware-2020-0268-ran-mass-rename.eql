@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0268 — Mass File Rename (babuk)
+// Status: deprecated | Level: high | ID: 4cbbe733-d028-551e-a81a-233c747d3562
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

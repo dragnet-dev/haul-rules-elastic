@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0786 — Recovery Inhibition (titan)
+// Status: stable | Level: high | ID: 3724aeca-a87c-582d-a407-b3a1537b4372
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

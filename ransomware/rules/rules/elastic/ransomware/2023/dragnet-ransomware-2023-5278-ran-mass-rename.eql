@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-5278 — Mass File Rename (vicesociety)
+// Status: experimental | Level: high | ID: 8bd767bd-d0e8-5d6f-8a78-e4a72ba93a8a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

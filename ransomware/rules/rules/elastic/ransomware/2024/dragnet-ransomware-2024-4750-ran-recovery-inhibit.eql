@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4750 — Recovery Inhibition (blackbasta)
+// Status: experimental | Level: high | ID: 47f233b6-90e9-56e7-a158-1630d2377262
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

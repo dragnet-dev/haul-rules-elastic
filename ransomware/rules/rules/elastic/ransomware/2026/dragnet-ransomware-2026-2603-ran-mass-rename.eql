@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2603 — Mass File Rename (ransomhouse)
+// Status: stable | Level: high | ID: 85225957-d2a0-5d0d-a266-c7da97af2e77
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

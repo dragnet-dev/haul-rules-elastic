@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2410 — Mass File Rename (lapsus$)
+// Status: deprecated | Level: high | ID: 26bc5803-43a0-56e7-9148-1fcf13b791ee
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

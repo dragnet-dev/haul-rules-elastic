@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1944 — Recovery Inhibition (gunra)
+// Status: stable | Level: high | ID: 1825b28e-998a-5226-8d3b-b979f5e9a5c9
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

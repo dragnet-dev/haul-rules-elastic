@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0277 — Recovery Inhibition (phoenixcryptolocker)
+// Status: deprecated | Level: high | ID: ba170ef8-e207-5150-add0-df992a012b81
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

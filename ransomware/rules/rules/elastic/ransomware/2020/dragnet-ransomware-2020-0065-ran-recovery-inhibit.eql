@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0065 — Recovery Inhibition (dispossessor)
+// Status: experimental | Level: high | ID: ad5ba085-e23c-5ab5-8056-a3ac5ae72b50
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

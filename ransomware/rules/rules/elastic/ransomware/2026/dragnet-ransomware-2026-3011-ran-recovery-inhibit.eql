@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3011 — Recovery Inhibition (spacebears)
+// Status: stable | Level: high | ID: f3532a52-311c-5ae9-9647-4261389b0cd6
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

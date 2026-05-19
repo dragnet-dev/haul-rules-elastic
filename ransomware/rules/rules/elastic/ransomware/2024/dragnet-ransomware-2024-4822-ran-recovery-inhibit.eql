@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4822 — Recovery Inhibition (apt73)
+// Status: experimental | Level: high | ID: 86aa0f94-b7a7-559f-89fd-4568c0acf370
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

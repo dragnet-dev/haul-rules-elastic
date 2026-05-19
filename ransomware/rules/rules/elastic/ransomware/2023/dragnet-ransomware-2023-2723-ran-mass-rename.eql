@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-2723 — Mass File Rename (moneymessage)
+// Status: experimental | Level: high | ID: eafe9d04-e6c2-5b29-acf7-fa1a3b00fd4c
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

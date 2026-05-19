@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-1862 — Recovery Inhibition (arcusmedia)
+// Status: experimental | Level: high | ID: 728bb754-6769-504e-8346-96d355cd4efc
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

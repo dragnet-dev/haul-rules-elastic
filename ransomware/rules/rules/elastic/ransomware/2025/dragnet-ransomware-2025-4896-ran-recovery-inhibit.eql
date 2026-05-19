@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4896 — Recovery Inhibition (embargo)
+// Status: experimental | Level: high | ID: 55da518a-3de0-5cd0-ab4d-cb36f94bc2de
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

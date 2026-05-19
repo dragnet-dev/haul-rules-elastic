@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2136 — Mass File Rename (worldleaks)
+// Status: test | Level: high | ID: af16b942-bee3-584d-a94b-6b46a17c8b2e
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

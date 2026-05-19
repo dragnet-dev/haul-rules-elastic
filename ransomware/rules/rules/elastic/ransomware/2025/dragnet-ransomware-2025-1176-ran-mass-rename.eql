@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1176 — Mass File Rename (direwolf)
+// Status: experimental | Level: high | ID: d54e3e09-9131-5833-85c5-c584cc29a416
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

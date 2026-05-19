@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3685 — Mass File Rename (arvinclub)
+// Status: deprecated | Level: high | ID: 90f86351-e59b-578f-a2ba-5788d87ec367
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

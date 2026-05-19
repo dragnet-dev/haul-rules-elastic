@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1284 — Mass File Rename (cryp70n1c0d3)
+// Status: deprecated | Level: high | ID: 90f82212-e659-5863-920a-08e7c2b06acd
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

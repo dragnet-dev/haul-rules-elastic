@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-1134 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: d3c550ff-a5e0-5596-a78e-fadaa99b0aa6
+
+network where
+  destination.domain like~ "*https://t.me/ransomed_channel/232*"

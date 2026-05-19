@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1368 — Recovery Inhibition (arvinclub)
+// Status: deprecated | Level: high | ID: fc588179-24d0-5746-8d40-06c7c5e5e0c7
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

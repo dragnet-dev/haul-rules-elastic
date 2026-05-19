@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4563 — Mass File Rename (blackbyte)
+// Status: deprecated | Level: high | ID: af7af31a-3051-5804-90b4-f40a3d3ce5ac
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

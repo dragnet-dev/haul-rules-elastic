@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-2502 — Mass File Rename (werewolves)
+// Status: experimental | Level: high | ID: cf9a13a8-8e52-5960-b262-1b4a45188e08
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

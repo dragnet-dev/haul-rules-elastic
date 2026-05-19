@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4721 — Recovery Inhibition (crosslock)
+// Status: experimental | Level: high | ID: 83d0e246-4791-53a3-89a6-9a99ca94eaf4
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

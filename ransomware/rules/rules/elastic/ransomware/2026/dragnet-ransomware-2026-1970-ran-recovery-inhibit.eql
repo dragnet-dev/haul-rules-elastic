@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1970 — Recovery Inhibition (payload)
+// Status: stable | Level: high | ID: ef61ba9d-e376-5427-b8cb-1373e920e78a
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

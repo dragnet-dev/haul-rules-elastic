@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5815 — Recovery Inhibition (brotherhood)
+// Status: deprecated | Level: high | ID: 9134e9f6-109a-591b-b6dd-9fd1274803c3
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

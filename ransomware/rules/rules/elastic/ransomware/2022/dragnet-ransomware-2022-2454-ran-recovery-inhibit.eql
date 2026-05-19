@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2454 — Recovery Inhibition (shaoleaks)
+// Status: deprecated | Level: high | ID: e3198afb-a4d2-5248-886d-c45afb025c39
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

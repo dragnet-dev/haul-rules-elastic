@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0912 — Mass File Rename (kryptos)
+// Status: deprecated | Level: high | ID: 843405ab-975c-573f-a7fa-1e5645f65f06
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

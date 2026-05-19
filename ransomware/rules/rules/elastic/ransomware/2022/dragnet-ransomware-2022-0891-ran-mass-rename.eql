@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0891 — Mass File Rename (pandora)
+// Status: deprecated | Level: high | ID: 989886b5-cf1b-5145-8a80-9e2f4614c8c6
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

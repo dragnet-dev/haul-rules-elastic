@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7597 — Recovery Inhibition (morpheus)
+// Status: deprecated | Level: high | ID: 8866e7d5-83e3-5e10-a5f9-c34061b2deb5
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

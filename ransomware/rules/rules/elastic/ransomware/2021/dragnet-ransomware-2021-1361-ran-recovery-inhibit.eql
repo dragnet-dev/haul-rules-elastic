@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1361 — Recovery Inhibition (karma)
+// Status: deprecated | Level: high | ID: 449d25bd-efc5-53cb-aee7-3896ba6816cc
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

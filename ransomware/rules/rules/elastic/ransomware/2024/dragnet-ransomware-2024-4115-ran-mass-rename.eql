@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4115 — Mass File Rename (hunters)
+// Status: experimental | Level: high | ID: 274f1d2f-d4ee-5e7c-b9b8-84bf363c58c2
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0472 — Recovery Inhibition (monti)
+// Status: experimental | Level: high | ID: 6f924302-733c-5d00-aa03-d029b94b2286
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

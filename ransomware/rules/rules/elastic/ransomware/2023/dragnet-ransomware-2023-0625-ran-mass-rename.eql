@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0625 — Mass File Rename (medusa)
+// Status: experimental | Level: high | ID: c47c2e22-8988-5ff2-b3cf-f6def0e22b4e
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

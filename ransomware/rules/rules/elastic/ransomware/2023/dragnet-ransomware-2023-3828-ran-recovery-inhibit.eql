@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3828 — Recovery Inhibition (bianlian)
+// Status: deprecated | Level: high | ID: b5341105-7ffa-5b2e-8090-afe3539490f5
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

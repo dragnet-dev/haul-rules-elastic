@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6976 — Recovery Inhibition (securotrop)
+// Status: experimental | Level: high | ID: 452d3c13-f0ed-5843-9085-4ee3806ff2e4
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

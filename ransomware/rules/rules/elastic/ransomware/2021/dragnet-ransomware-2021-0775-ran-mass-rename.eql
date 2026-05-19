@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0775 — Mass File Rename (spook)
+// Status: deprecated | Level: high | ID: 06cdf5fd-5a8c-581f-8dea-99a6e34c2cb4
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

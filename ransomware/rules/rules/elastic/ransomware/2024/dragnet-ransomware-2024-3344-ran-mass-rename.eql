@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-3344 — Mass File Rename (blacksuit)
+// Status: experimental | Level: high | ID: 474b2a15-38e5-5aa5-a39b-2a94e5df9b3a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

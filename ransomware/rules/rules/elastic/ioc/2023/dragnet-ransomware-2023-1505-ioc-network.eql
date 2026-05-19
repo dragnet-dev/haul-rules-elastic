@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-1505 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: d9de5131-0ccc-56c0-af91-24de114f7c34
+
+network where
+  destination.domain like~ "*http://stniiomyjliimcgkvdszvgen3eaaoz55hreqqx6o77yvmpwt7gklffqd.onion/?id=Forest%20Ridge*"

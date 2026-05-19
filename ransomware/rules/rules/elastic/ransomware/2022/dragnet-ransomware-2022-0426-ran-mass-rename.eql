@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0426 — Mass File Rename (ragnarlocker)
+// Status: deprecated | Level: high | ID: 2b4777aa-dc85-56c2-a628-ddb61cea1031
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

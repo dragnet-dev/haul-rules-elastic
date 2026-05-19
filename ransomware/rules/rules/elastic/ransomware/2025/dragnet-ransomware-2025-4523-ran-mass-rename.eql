@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4523 — Mass File Rename (benzona)
+// Status: deprecated | Level: high | ID: e54d209d-beb2-5bbb-95a6-d0064110845d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

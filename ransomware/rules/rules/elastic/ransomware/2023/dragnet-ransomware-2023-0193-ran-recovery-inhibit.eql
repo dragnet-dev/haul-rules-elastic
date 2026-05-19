@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0193 — Recovery Inhibition (darkpower)
+// Status: experimental | Level: high | ID: b21c92ac-f6a5-5e1a-b8d8-1e05983c28fa
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

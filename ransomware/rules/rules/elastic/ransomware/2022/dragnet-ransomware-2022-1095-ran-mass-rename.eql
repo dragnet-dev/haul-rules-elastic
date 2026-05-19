@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1095 — Mass File Rename (nightsky)
+// Status: deprecated | Level: high | ID: e2e31e5b-892e-561b-8f9a-6dc5173652e0
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

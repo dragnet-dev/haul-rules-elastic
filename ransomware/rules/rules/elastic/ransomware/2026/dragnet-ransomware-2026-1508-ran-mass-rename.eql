@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1508 — Mass File Rename (titan)
+// Status: stable | Level: high | ID: 00bd8f41-89e2-5f23-ae3f-4ffa1c287251
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

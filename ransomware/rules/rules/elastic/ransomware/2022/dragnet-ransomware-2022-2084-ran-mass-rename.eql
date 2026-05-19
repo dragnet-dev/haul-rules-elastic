@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2084 — Mass File Rename (medusalocker)
+// Status: deprecated | Level: high | ID: b7e28b9b-1aab-599d-93a5-df46cae647c7
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

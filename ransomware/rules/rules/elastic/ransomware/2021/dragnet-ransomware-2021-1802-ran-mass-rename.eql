@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1802 — Mass File Rename (payloadbin)
+// Status: deprecated | Level: high | ID: 0763d500-50a0-5cea-b853-0f02bd4423ab
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [IOC]: dragnet-supply-2026-118729 — C2 Network Communication
+// Status: stable | Level: critical | ID: 65d51578-7bc9-57b7-bf33-75f4336cc311
+
+network where
+  (destination.domain like~ "*t.m-kosche.com*" or destination.domain like~ "*git-tanstack.com*") or destination.ip like~ "*94.154.172.43*" or (destination.domain like~ "*https://registry.npmjs.org/-/npm/v1/tokens*" or destination.domain like~ "*https://github.com/oven-sh/bun/releases/download/bun-v1.3.13/*" or destination.domain like~ "*https://api.github.com/search/commits?q=OhNoWhatsGoingOnWithGitHub&sort=author-date&order=desc&per_page=50*" or destination.domain like~ "*https://registry.npmjs.org/-/npm/v1/tokens*" or destination.domain like~ "*http://filev2.getsession.org/file/*" or destination.domain like~ "*https://api.github.com/repos/*")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-2527 — Recovery Inhibition (satanlockv2)
+// Status: experimental | Level: high | ID: db5fa3e6-8629-57af-9db8-f2a5e44e1889
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

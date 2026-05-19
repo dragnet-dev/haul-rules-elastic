@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-1080 — Recovery Inhibition (metaencryptor)
+// Status: experimental | Level: high | ID: 88d0059f-8a6f-5a70-bfa6-ce6867e7a4f1
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

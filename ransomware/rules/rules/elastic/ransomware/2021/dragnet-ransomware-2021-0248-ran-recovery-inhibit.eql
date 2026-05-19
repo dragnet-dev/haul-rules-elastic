@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0248 — Recovery Inhibition (conti)
+// Status: deprecated | Level: high | ID: d8be38e5-f929-5066-9cba-65a5e378430d
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

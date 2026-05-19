@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1200 — Recovery Inhibition (payloadbin)
+// Status: deprecated | Level: high | ID: 5499ac6b-2545-5c6c-b065-6c66862cb453
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

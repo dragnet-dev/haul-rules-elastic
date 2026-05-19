@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5438 — Mass File Rename (tridentlocker)
+// Status: experimental | Level: high | ID: 10a2be81-7121-5d5f-9cbb-effdf44aff17
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5879 — Mass File Rename (sinobi)
+// Status: test | Level: high | ID: 7be06ea1-a1ec-5b84-a0e7-02904e891089
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

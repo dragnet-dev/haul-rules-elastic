@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3736 — Mass File Rename (toufan)
+// Status: deprecated | Level: high | ID: 81121bbe-b75c-5ea6-a2a9-460ad72d89bb
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

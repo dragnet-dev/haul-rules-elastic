@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-5290 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: c8741eae-9a78-51d2-9392-59c7b52b3e88
+
+network where
+  destination.domain like~ "*http://stniiomyjliimcgkvdszvgen3eaaoz55hreqqx6o77yvmpwt7gklffqd.onion/?id=TWINTOWER*"

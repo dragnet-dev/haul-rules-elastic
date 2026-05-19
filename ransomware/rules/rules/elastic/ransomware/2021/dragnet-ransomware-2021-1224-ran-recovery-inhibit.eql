@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1224 — Recovery Inhibition (cring)
+// Status: deprecated | Level: high | ID: 491f37a7-0fe5-54c6-9a56-ce366c109798
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

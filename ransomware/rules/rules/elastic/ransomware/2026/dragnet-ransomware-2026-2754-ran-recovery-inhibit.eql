@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2754 — Recovery Inhibition (embargo)
+// Status: stable | Level: high | ID: d97d5e1f-7972-5854-bbb6-825207029ff4
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

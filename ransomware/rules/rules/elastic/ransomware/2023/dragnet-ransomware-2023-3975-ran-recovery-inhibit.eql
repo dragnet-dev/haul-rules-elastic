@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3975 — Recovery Inhibition (lockbit3)
+// Status: experimental | Level: high | ID: 557df922-d726-56c2-a617-1f6ec1ada5e9
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

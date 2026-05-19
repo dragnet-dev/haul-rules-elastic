@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0289 — Mass File Rename (mallox)
+// Status: deprecated | Level: high | ID: a798deff-a08a-5e48-88c2-a2b64ef71926
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

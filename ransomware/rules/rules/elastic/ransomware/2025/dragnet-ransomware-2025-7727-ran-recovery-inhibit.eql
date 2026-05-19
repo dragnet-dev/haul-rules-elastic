@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7727 — Recovery Inhibition (clop)
+// Status: deprecated | Level: high | ID: 46a2685f-6f2f-522f-a07f-676158c8d2bd
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

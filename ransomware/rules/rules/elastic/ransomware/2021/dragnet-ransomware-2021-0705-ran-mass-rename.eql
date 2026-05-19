@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0705 — Mass File Rename (cuba)
+// Status: deprecated | Level: high | ID: da005f41-bacc-50e0-8ab3-38932ede5824
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

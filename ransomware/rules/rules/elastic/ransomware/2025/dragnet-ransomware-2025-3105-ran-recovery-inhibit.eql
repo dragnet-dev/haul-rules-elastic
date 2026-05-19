@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3105 — Recovery Inhibition (everest)
+// Status: deprecated | Level: high | ID: cfd2e1fb-3aa3-5682-95c9-6ddef27b140a
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3114 — Recovery Inhibition (vect)
+// Status: deprecated | Level: high | ID: 22957a37-898e-56d8-a1a5-069d9a998e60
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

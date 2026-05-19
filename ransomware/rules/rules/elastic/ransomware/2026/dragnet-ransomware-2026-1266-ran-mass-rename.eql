@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1266 — Mass File Rename (pear)
+// Status: stable | Level: high | ID: 1dbddd16-e30c-5f22-980b-93701d4abee6
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

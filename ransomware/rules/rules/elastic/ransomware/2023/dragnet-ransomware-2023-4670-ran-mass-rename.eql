@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4670 — Mass File Rename (medusa)
+// Status: deprecated | Level: high | ID: c7ff033b-1ecd-560f-9b73-d4f81e9a05c4
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

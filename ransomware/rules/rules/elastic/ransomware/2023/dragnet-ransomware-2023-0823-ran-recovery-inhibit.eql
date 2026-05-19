@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0823 — Recovery Inhibition (cactus)
+// Status: experimental | Level: high | ID: 4223adb3-5b66-55d8-9c18-6ba11ca97b68
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

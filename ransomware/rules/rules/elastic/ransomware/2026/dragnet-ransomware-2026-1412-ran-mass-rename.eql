@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1412 — Mass File Rename (coinbasecartel)
+// Status: stable | Level: high | ID: bd215097-c0b5-5ee2-adea-3e30e4b9536b
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

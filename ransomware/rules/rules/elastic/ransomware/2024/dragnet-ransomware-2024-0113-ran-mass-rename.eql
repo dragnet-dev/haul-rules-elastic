@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0113 — Mass File Rename (orca)
+// Status: experimental | Level: high | ID: 1b64a476-23e5-5282-a69a-9481dd40709a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

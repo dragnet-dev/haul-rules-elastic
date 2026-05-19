@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2313 — Recovery Inhibition (lapsus$)
+// Status: deprecated | Level: high | ID: 578ed029-1d35-555c-ba2e-183f7138e6c7
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

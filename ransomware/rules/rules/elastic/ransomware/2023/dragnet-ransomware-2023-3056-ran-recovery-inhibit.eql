@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3056 — Recovery Inhibition (karakurt)
+// Status: deprecated | Level: high | ID: 41fc7597-e1c6-5a43-abd7-dab66e230599
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

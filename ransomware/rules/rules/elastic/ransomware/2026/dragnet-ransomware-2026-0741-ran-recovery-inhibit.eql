@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0741 — Recovery Inhibition (ALP-001)
+// Status: stable | Level: high | ID: 6d0017aa-8273-5b30-8462-f96957778643
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

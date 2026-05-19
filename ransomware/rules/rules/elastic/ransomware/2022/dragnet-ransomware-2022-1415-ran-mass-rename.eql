@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1415 — Mass File Rename (nokoyawa)
+// Status: deprecated | Level: high | ID: ed5c755c-332a-57df-9f2c-718d704a3555
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

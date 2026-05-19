@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2026-1115 — Ransomware C2 Communication
+// Status: test | Level: high | ID: 4b8ac86c-01b1-5bb9-b164-f9ddda955c1c
+
+network where
+  destination.domain like~ "*http://tezwsse5czllksjb7cwp65rvnk4oobmzti2znn42i43bjdfd2prqqkad.onion*"

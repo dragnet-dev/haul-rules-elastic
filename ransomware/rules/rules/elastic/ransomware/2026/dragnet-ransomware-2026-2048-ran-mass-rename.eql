@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2048 — Mass File Rename (qilin)
+// Status: test | Level: high | ID: 75b4a0fe-a8cd-53ff-a538-cbfbf7bcebd1
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

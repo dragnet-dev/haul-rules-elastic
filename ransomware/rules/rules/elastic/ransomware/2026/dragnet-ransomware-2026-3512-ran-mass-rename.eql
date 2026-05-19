@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3512 — Mass File Rename (PrinzEugen)
+// Status: stable | Level: high | ID: b01fe713-28bf-5f9e-9830-73909825a0e0
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

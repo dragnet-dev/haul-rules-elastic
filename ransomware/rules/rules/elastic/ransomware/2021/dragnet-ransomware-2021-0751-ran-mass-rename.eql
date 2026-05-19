@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0751 — Mass File Rename (snatch)
+// Status: deprecated | Level: high | ID: 63e647b4-48cb-5e66-a7b3-e216bd67b84f
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

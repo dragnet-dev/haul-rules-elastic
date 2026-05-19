@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0328 — Recovery Inhibition (kazu)
+// Status: deprecated | Level: high | ID: 9a3dd636-16f0-5a41-a437-cc053ec3fe95
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3669 — Recovery Inhibition (cyclops)
+// Status: deprecated | Level: high | ID: 2da8eb82-d432-5baa-8c2d-0af9a6dc7eb1
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

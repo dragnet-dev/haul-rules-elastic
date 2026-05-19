@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0266 — Recovery Inhibition (meow)
+// Status: experimental | Level: high | ID: 40e6bfe7-27af-502a-948f-afbd2ab808e5
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2917 — Recovery Inhibition (bitlocker)
+// Status: deprecated | Level: high | ID: f7d9cd46-6ed0-5cc3-ae6a-f39e14859d7f
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

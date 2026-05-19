@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0198 — Recovery Inhibition (darkside)
+// Status: deprecated | Level: high | ID: ba7968f3-6bc1-5969-a4d9-8158e12a23b4
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

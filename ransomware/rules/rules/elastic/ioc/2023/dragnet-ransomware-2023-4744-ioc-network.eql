@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-4744 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: 908c251b-b64f-5ca3-add6-bfeae73d301d
+
+network where
+  destination.domain like~ "*http://stniiomyjliimcgkvdszvgen3eaaoz55hreqqx6o77yvmpwt7gklffqd.onion/?id=CEC*"

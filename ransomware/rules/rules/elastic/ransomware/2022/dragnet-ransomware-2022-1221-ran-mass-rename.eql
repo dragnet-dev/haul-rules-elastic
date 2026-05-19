@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1221 — Mass File Rename (karakurt)
+// Status: experimental | Level: high | ID: 43b82e71-ab94-5afb-b7e9-00d6ccdb22cc
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

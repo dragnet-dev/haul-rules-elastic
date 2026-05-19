@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0224 — Recovery Inhibition (netflim)
+// Status: deprecated | Level: high | ID: 6e1010ef-2256-5ec1-afb2-a9095901cc84
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

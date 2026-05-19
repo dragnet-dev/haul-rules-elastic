@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4039 — Recovery Inhibition (ralord)
+// Status: experimental | Level: high | ID: da0f9246-7258-5f7f-acb6-71b7539338ed
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

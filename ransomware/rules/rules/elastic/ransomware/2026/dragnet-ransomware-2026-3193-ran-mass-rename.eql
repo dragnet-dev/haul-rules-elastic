@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3193 — Mass File Rename (shinyhunters)
+// Status: deprecated | Level: high | ID: a856e5aa-eae7-5efb-91b2-74cb4d339b14
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

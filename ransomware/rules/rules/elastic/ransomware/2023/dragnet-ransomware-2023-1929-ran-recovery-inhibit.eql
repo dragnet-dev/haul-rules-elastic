@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-1929 — Recovery Inhibition (toufan)
+// Status: deprecated | Level: high | ID: 915a1712-b2ab-5757-8e4a-cfa5c19ca908
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

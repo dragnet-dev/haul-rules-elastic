@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0639 — Mass File Rename (helldown)
+// Status: experimental | Level: high | ID: a1a0b4f5-b842-5767-9565-326287108469
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

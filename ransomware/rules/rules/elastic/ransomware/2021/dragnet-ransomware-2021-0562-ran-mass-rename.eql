@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0562 — Mass File Rename (alphv)
+// Status: deprecated | Level: high | ID: 5fb517e5-eb71-53f3-9b05-0551c1dd33f1
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

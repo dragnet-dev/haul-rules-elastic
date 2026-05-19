@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1782 — Recovery Inhibition (bqtlock)
+// Status: experimental | Level: high | ID: 75f1ef96-d973-556c-85ba-bf81bf3477ca
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

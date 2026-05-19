@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3703 — Recovery Inhibition (medusa)
+// Status: deprecated | Level: high | ID: 383662ed-90e8-5f84-af4d-9776a4fd3ee6
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

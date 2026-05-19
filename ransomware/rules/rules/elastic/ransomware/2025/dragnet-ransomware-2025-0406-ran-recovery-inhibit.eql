@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0406 — Recovery Inhibition (kraken)
+// Status: experimental | Level: high | ID: 427838e6-ad37-5264-af12-2eb9a6486a33
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1970 — Recovery Inhibition (stormous)
+// Status: experimental | Level: high | ID: 8dadfbea-c502-5cd4-884e-704a025d9358
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

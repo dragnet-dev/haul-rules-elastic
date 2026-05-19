@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1700 — Mass File Rename (dragonforce)
+// Status: stable | Level: high | ID: a6c46ff6-7d8f-5dd2-a34f-8af8b9d1ac66
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

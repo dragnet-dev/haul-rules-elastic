@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0487 — Mass File Rename (blackmatter)
+// Status: deprecated | Level: high | ID: 2072e3d5-ba13-5322-95cb-7006fcc66bc4
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0175 — Recovery Inhibition (deathkitty)
+// Status: deprecated | Level: high | ID: 829859a7-e004-54d3-a7f3-156a5ccdbb82
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

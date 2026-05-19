@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0635 — Recovery Inhibition (werewolves)
+// Status: experimental | Level: high | ID: 74ad9132-3308-572d-bd50-65f660c68173
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

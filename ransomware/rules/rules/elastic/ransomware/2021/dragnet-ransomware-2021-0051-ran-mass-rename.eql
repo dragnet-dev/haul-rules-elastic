@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0051 — Mass File Rename (robinhood)
+// Status: deprecated | Level: high | ID: e32e937c-9497-5602-a59b-5307213b3f90
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

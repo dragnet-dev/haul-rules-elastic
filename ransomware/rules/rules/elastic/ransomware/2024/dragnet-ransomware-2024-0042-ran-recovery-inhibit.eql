@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0042 — Recovery Inhibition (funksec)
+// Status: experimental | Level: high | ID: f826c188-40fd-5b13-b3ad-4befc32fb2ef
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

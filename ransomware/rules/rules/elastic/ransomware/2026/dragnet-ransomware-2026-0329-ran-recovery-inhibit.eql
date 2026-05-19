@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0329 — Recovery Inhibition (killsec)
+// Status: deprecated | Level: high | ID: d7383598-ae79-54f2-91a0-f7bcf3c739a0
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

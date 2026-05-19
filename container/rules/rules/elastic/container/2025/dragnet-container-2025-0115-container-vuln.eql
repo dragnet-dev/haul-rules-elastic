@@ -1,0 +1,5 @@
+// Dragnet [Container]: dragnet-container-2025-0115 — Vulnerable Base Image Pull
+// Status: deprecated | Level: critical | ID: 44eaa87c-d8f2-55e3-b5b2-344ed7ea7711
+
+any where
+  (process.executable like~ "*alpine:3.19*" or process.executable like~ "*azure linux:3.0*" or process.executable like~ "*cbl-mariner:2.0*" or process.executable like~ "*chainguard:*" or process.executable like~ "*wolfi:*")

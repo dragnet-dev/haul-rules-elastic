@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2955 — Mass File Rename (payoutsking)
+// Status: deprecated | Level: high | ID: 718e59d3-4e67-58a3-8b14-2f5bcc0cde0a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

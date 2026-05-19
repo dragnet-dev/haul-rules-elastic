@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-1840 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: 03028f26-45ca-5751-b726-9637ee126629
+
+network where
+  destination.domain like~ "*http://stniiomyjliimcgkvdszvgen3eaaoz55hreqqx6o77yvmpwt7gklffqd.onion/?id=Nor-Cal*"

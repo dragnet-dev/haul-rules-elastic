@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5788 — Mass File Rename (darkvault)
+// Status: experimental | Level: high | ID: 3cf506a6-2119-50e8-9f7e-245a712b1443
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

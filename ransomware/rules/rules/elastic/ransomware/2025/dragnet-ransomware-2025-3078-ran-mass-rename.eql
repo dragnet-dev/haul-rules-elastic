@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3078 — Mass File Rename (funksec)
+// Status: experimental | Level: high | ID: 5e7aaa95-6cb1-50dc-9306-d70fb8a5e8ff
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

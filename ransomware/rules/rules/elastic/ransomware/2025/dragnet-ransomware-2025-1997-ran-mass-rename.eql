@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1997 — Mass File Rename (ralord)
+// Status: experimental | Level: high | ID: 03331047-d2c4-511a-b3b9-6e18fb1c99db
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0206 — Recovery Inhibition (global)
+// Status: experimental | Level: high | ID: 8f00ab46-e7e3-54a2-b808-d57743f11a68
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5284 — Recovery Inhibition (qilin)
+// Status: experimental | Level: high | ID: ece23bd0-be73-57a5-905f-62da93c4bd28
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

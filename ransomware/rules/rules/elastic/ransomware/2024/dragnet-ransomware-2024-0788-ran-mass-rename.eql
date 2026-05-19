@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0788 — Mass File Rename (meow)
+// Status: experimental | Level: high | ID: a493aabc-ba1a-5a65-b33a-3872c7848685
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0937 — Mass File Rename (8base)
+// Status: experimental | Level: high | ID: ecf5873f-5a8c-53fe-b03e-e6c1c57b6bb7
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

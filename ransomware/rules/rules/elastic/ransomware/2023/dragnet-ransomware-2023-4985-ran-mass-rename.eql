@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4985 — Mass File Rename (raznatovic)
+// Status: experimental | Level: high | ID: fba2adb8-d730-5040-b9bf-86bed27eb8ed
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

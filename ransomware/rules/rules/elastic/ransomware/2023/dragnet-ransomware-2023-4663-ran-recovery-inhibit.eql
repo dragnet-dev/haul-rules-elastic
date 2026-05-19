@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4663 — Recovery Inhibition (cryptbb)
+// Status: experimental | Level: high | ID: 07d8b03d-345c-5766-ad2f-01c2fe334e3f
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

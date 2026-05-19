@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1695 — Recovery Inhibition (tridentlocker)
+// Status: test | Level: high | ID: d1049c76-5731-5d69-a2d5-121d3d99ee53
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

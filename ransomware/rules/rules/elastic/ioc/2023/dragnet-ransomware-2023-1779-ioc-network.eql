@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-1779 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: 18fb79b2-aaa2-5062-a5c1-adca82c2bb0c
+
+network where
+  destination.domain like~ "*https://ransomed.vc/samo/TechKids.txt*"

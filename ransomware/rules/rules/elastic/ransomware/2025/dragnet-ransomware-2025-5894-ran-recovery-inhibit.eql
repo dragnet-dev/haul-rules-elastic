@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5894 — Recovery Inhibition (kairos)
+// Status: experimental | Level: high | ID: af84d9f2-2376-5263-bab7-c6f3101113a4
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

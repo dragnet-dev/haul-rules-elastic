@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0523 — Mass File Rename (chort)
+// Status: experimental | Level: high | ID: 8a2e1abf-5218-546f-8d1b-387f65456355
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-2451 — Mass File Rename (thegentlemen)
+// Status: experimental | Level: high | ID: e15e93f0-4410-581c-a3b5-21ccd6eb88e6
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

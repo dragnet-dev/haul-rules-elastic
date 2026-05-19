@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3108 — Recovery Inhibition (vect)
+// Status: deprecated | Level: high | ID: e5bda58a-5228-53ae-9fa9-6bc4ceac4980
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

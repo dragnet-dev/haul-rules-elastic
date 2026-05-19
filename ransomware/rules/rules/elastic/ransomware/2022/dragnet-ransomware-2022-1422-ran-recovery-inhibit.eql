@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1422 — Recovery Inhibition (karakurt)
+// Status: deprecated | Level: high | ID: d75c13d9-3dbb-56bf-a874-1225bf5c95aa
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

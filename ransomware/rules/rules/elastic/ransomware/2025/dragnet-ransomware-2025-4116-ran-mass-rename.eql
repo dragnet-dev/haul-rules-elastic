@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4116 — Mass File Rename (shinyhunters)
+// Status: experimental | Level: high | ID: ef219d96-a253-5950-a788-587144d9b1b5
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

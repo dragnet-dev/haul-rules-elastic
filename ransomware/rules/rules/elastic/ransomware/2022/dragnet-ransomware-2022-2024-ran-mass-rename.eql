@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2024 — Mass File Rename (leaktheanalyst)
+// Status: deprecated | Level: high | ID: 17b715cf-5b1a-5dcb-8d44-af1902113a64
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

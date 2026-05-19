@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2524 — Mass File Rename (shaoleaks)
+// Status: deprecated | Level: high | ID: fc96c9fc-7e1a-5753-8ff7-39183c7ad87c
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1965 — Mass File Rename (blackshrantac)
+// Status: test | Level: high | ID: 6e900760-dfbe-5a1c-93ce-3e21b7e14f78
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

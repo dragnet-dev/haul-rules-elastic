@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0656 — Mass File Rename (sabbath)
+// Status: deprecated | Level: high | ID: 8badba86-eb8c-554c-96c7-66843bec0c08
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

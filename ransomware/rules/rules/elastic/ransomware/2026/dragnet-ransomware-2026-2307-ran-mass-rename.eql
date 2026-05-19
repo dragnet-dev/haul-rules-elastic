@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2307 — Mass File Rename (ALP-001)
+// Status: stable | Level: high | ID: 64324628-1cd0-5a98-9ab4-7428e53cff0a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1280 — Mass File Rename (xinglocker)
+// Status: deprecated | Level: high | ID: 7144e1a5-850c-506a-a5db-88b6fda98632
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

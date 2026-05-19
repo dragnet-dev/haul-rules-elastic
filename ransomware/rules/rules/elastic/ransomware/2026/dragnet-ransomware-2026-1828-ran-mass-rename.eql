@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1828 — Mass File Rename (krybit)
+// Status: stable | Level: high | ID: dea2513f-02d9-5f3a-b28c-a99ef5f051c7
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

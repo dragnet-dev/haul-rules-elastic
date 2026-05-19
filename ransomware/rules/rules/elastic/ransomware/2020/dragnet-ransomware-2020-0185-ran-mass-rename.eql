@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0185 — Mass File Rename (revil)
+// Status: deprecated | Level: high | ID: 38f7cb44-39a1-54d7-80be-c512be6ba8f3
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7580 — Recovery Inhibition (GDLockerSec)
+// Status: experimental | Level: high | ID: 7cc862c4-cb07-5e14-9801-6bf5a86821c1
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

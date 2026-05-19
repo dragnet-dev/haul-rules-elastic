@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4551 — Mass File Rename (moneymessage)
+// Status: deprecated | Level: high | ID: 91fc912a-ddd4-51d7-80d6-f9929c9618d7
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

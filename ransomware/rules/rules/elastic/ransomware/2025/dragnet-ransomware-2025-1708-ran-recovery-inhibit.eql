@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1708 — Recovery Inhibition (yurei)
+// Status: experimental | Level: high | ID: 85afb05c-a697-57d2-a615-13f2802e0c5a
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

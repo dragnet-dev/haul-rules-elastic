@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0762 — Recovery Inhibition (medusalocker)
+// Status: experimental | Level: high | ID: 1df4f703-62a8-5505-beaf-c19aa976d1be
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

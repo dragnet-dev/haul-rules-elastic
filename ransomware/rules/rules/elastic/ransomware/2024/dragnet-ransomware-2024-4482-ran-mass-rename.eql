@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4482 — Mass File Rename (dAn0n)
+// Status: experimental | Level: high | ID: 40e25eb0-8408-5167-9fc2-802190ce4d29
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

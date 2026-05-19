@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-2585 — Recovery Inhibition (0mega)
+// Status: experimental | Level: high | ID: 4b9c0894-6de6-5e6d-acef-3622d3c639d5
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

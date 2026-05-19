@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0040 — Mass File Rename (aurora)
+// Status: stable | Level: high | ID: 513a77b3-3430-5081-8059-222fbfabc337
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1598 — Recovery Inhibition (bert)
+// Status: experimental | Level: high | ID: 83ffb458-3138-5c5c-9c37-ca14ca3ad4c7
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

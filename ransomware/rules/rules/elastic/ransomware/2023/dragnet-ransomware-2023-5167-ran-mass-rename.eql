@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-5167 — Mass File Rename (darkrace)
+// Status: experimental | Level: high | ID: 66f99c39-e198-52b5-ad8b-0f93e763a39b
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

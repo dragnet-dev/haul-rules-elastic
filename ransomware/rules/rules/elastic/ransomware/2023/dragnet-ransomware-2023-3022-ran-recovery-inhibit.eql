@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3022 — Recovery Inhibition (karakurt)
+// Status: experimental | Level: high | ID: 87c13411-741b-563c-af28-53c0315f0f7c
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2024-3044 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: 7ecf5323-e3db-5d25-ab2a-b73f0ffbab8a
+
+network where
+  destination.domain like~ "*http://stniiomyjliimcgkvdszvgen3eaaoz55hreqqx6o77yvmpwt7gklffqd.onion/?id=plasmatherm.com*"

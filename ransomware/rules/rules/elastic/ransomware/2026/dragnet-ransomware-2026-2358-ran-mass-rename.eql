@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2358 — Mass File Rename (osiris)
+// Status: deprecated | Level: high | ID: 59f67657-65e7-5161-98e2-d5f46387b54a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

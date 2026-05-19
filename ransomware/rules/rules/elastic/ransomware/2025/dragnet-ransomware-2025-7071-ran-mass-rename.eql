@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7071 — Mass File Rename (ransomhub)
+// Status: experimental | Level: high | ID: febe7f2b-45d5-545e-adcf-0799d7f3b185
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

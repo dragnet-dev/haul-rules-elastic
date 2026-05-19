@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2650 — Recovery Inhibition (m3rx)
+// Status: stable | Level: high | ID: 65cd4f32-0a1a-5411-8ec7-634483f480fd
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

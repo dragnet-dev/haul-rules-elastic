@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0726 — Mass File Rename (noescape)
+// Status: experimental | Level: high | ID: 54730db4-0842-5000-872d-ca648a7fbffb
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

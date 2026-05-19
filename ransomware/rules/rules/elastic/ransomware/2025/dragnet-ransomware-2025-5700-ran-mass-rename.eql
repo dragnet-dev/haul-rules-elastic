@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5700 — Mass File Rename (devman)
+// Status: experimental | Level: high | ID: bdacd40e-d230-506a-87fc-43c63733c075
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

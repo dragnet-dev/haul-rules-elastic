@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-2849 — Recovery Inhibition (zerotolerance)
+// Status: experimental | Level: high | ID: 283db70d-f751-5b2a-84af-53d6c06d47f0
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

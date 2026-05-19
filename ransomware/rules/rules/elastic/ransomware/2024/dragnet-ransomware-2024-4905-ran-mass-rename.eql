@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4905 — Mass File Rename (cicada3301)
+// Status: experimental | Level: high | ID: 8e42724a-cc94-52a1-8996-818018b3ca38
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

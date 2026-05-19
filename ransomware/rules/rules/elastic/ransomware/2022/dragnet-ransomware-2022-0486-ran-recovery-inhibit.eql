@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0486 — Recovery Inhibition (lorenz)
+// Status: deprecated | Level: high | ID: 1f805d39-6e22-550e-aa08-5a2c0367457e
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

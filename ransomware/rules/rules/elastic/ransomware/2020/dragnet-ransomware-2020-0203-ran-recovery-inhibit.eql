@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0203 — Recovery Inhibition (dharma)
+// Status: deprecated | Level: high | ID: bb337a23-750a-5dfd-a42d-77ffc9a70799
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

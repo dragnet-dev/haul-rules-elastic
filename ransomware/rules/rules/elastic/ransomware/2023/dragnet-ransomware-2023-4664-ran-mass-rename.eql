@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4664 — Mass File Rename (donutleaks)
+// Status: experimental | Level: high | ID: 1e2f9faa-3730-5667-b714-7c5d83b41ba9
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

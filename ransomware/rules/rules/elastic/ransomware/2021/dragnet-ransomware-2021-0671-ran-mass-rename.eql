@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0671 — Mass File Rename (everest)
+// Status: deprecated | Level: high | ID: 62c27fbc-e869-5b08-8d4f-5af1aa387a26
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

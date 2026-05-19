@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2881 — Recovery Inhibition (onyx)
+// Status: deprecated | Level: high | ID: 589469f7-b50e-51b8-9b27-96af3ff907f9
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0570 — Mass File Rename (safepay)
+// Status: deprecated | Level: high | ID: 7cf10796-ea77-5fbe-89a2-07d0d8cf9e52
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

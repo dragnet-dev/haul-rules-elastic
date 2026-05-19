@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5464 — Recovery Inhibition (cloak)
+// Status: experimental | Level: high | ID: c9e4630b-ded4-57d3-9f1b-bee3b6df7ea2
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

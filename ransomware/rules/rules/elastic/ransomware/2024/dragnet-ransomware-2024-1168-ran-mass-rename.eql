@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-1168 — Mass File Rename (medusa)
+// Status: experimental | Level: high | ID: b5f9cee0-65bf-5369-9c30-2cf25f7eeab5
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

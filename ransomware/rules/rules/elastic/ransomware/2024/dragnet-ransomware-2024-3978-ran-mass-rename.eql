@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-3978 — Mass File Rename (rhysida)
+// Status: deprecated | Level: high | ID: 7eacf9d8-84ed-5fe9-b5fa-f3fc830d5ea2
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Container]: dragnet-container-2026-1010 — Vulnerable Base Image Pull
+// Status: deprecated | Level: critical | ID: a18945d0-5452-552e-97dd-d4b33dfdd5e0
+
+any where
+  (process.executable like~ "*debian:11*" or process.executable like~ "*debian:12*" or process.executable like~ "*debian:13*" or process.executable like~ "*debian:14*" or process.executable like~ "*debian:8*" or process.executable like~ "*ubuntu:14.04*" or process.executable like~ "*ubuntu:16.04*" or process.executable like~ "*ubuntu:16.04-ESM*" or process.executable like~ "*ubuntu:16.10*" or process.executable like~ "*ubuntu:17.04*")

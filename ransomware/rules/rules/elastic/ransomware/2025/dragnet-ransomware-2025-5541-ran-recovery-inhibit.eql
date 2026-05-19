@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5541 — Recovery Inhibition (clop)
+// Status: experimental | Level: high | ID: 59d54138-53b8-529f-aebb-08a81c41fde9
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

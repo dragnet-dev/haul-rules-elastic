@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0185 — Mass File Rename (flocker)
+// Status: experimental | Level: high | ID: 8037e0f9-64db-53e6-9668-70eebc5273e8
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3767 — Mass File Rename (bianlian)
+// Status: experimental | Level: high | ID: ad393d32-338f-5973-a939-34c033d0052d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-1178 — Mass File Rename (raworld)
+// Status: experimental | Level: high | ID: 6e195c33-3792-546f-b122-0dfe897c10c5
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

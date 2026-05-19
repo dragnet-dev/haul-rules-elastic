@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0923 — Mass File Rename (rhysida)
+// Status: experimental | Level: high | ID: e5b58a03-acef-534b-bf6d-97c0718453a9
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

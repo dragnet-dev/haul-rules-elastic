@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2704 — Mass File Rename (bitlocker)
+// Status: deprecated | Level: high | ID: 5a1bd695-bdda-5ae4-8d52-2e9774fa1169
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

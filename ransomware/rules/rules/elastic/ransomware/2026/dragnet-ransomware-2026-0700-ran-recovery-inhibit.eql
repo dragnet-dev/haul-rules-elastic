@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0700 — Recovery Inhibition (abyss)
+// Status: deprecated | Level: high | ID: 73948aaf-cfc1-59b1-83fa-9b51d44926ee
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

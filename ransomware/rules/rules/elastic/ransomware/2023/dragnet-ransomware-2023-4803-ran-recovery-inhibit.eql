@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4803 — Recovery Inhibition (werewolves)
+// Status: deprecated | Level: high | ID: 66b820ce-7903-5b7d-9443-f48493677896
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

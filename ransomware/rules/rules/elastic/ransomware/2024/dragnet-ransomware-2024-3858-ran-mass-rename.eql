@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-3858 — Mass File Rename (SilentRansomGroup)
+// Status: deprecated | Level: high | ID: bd6afee1-ad33-5b9e-a094-1c98e20576bd
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")
