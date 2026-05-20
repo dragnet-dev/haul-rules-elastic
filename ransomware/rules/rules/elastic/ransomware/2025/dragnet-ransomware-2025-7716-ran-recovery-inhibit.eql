@@ -1,5 +1,5 @@
 // Dragnet [Ransomware]: dragnet-ransomware-2025-7716 — Recovery Inhibition (coinbasecartel)
-// Status: test | Level: high | ID: 66e133ff-cdb1-5e9f-8794-9aa2e3a894d2
+// Status: experimental | Level: high | ID: 66e133ff-cdb1-5e9f-8794-9aa2e3a894d2
 
 process where
   ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
