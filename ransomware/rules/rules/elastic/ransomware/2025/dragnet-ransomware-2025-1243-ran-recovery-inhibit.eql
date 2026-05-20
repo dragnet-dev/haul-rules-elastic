@@ -1,5 +1,5 @@
 // Dragnet [Ransomware]: dragnet-ransomware-2025-1243 — Recovery Inhibition (clop)
-// Status: test | Level: high | ID: 46298f89-81c3-5220-a768-12f031f569ff
+// Status: experimental | Level: high | ID: 46298f89-81c3-5220-a768-12f031f569ff
 
 process where
   ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
