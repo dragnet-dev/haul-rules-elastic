@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0509 — Recovery Inhibition (rhysida)
+// Status: experimental | Level: high | ID: 027557b9-0e82-5eff-9a18-fda9ebbeffc5
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-1779 — Mass File Rename (raznatovic)
+// Status: experimental | Level: high | ID: 2d121da9-a662-5686-9196-ec11728e9ae7
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2161 — Mass File Rename (nightspire)
+// Status: deprecated | Level: high | ID: 75663f93-5540-58b9-a5f6-bbd59bd9ba09
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

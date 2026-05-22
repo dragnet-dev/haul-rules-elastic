@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5349 — Mass File Rename (cactus)
+// Status: experimental | Level: high | ID: 5452e0e5-f38d-523d-bb8f-0084709ad5e3
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

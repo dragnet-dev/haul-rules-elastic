@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2252 — Recovery Inhibition (bravox)
+// Status: stable | Level: high | ID: 2de51a4b-dbdb-5d2d-b3cd-995a2d802767
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

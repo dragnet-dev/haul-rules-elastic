@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0538 — Recovery Inhibition (vicesociety)
+// Status: experimental | Level: high | ID: 232d66ba-ae2e-5f3d-820f-40f52ad0dcb1
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

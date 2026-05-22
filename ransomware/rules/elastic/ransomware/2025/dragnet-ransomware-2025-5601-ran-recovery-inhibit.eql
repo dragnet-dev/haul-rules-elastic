@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5601 — Recovery Inhibition (cephalus)
+// Status: deprecated | Level: high | ID: 12c587c1-451e-5b80-a9ba-9d36a6134c56
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

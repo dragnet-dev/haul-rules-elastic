@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2358 — Recovery Inhibition (osiris)
+// Status: deprecated | Level: high | ID: 0ab519d6-c1ad-53f7-b942-d5990a8d3095
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

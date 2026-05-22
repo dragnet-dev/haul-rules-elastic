@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0656 — Recovery Inhibition (sabbath)
+// Status: deprecated | Level: high | ID: 4882c6e8-8531-5ad0-b63a-4fd8b1c4a945
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

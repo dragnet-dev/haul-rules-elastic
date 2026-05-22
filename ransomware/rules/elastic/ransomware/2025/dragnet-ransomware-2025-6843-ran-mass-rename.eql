@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6843 — Mass File Rename (desolator)
+// Status: experimental | Level: high | ID: 512c20b9-737f-5333-a5b4-5a34d9d223ef
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

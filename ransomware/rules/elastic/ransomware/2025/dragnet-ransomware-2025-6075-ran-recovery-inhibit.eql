@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6075 — Recovery Inhibition (worldleaks)
+// Status: experimental | Level: high | ID: bc51327e-c6c3-526f-8c0e-7d42f8e6ade5
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

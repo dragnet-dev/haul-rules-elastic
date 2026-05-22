@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-1678 — Mass File Rename (dragonforce)
+// Status: deprecated | Level: high | ID: 53cd0667-58cf-5d63-8d0d-8066a317967b
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

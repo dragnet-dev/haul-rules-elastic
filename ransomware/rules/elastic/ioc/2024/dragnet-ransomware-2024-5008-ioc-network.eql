@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2024-5008 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: 6376142a-df2e-5c64-b187-652e79d516dc
+
+network where
+  destination.domain like~ "*http://lynxblog.net/leaks/677d94ae05a779c3d3a8cfc7*"

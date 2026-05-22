@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2025-4029 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: 84ce3b0e-bb7b-511b-9c09-7c4f835c650c
+
+network where
+  destination.domain like~ "*https://breachforums.hn//cic.html*"

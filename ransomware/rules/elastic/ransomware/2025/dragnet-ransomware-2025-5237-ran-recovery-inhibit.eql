@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5237 — Recovery Inhibition (sinobi)
+// Status: experimental | Level: high | ID: 0c13631a-bc37-5e52-bee7-5d32699dbc04
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4559 — Mass File Rename (skira)
+// Status: experimental | Level: high | ID: 6755cc3a-f38e-53ca-8070-84207e2f51b0
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

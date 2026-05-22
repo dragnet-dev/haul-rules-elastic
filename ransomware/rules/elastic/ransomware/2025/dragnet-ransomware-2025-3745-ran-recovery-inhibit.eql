@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3745 — Recovery Inhibition (kazu)
+// Status: experimental | Level: high | ID: df3c6a52-7b49-570d-8fcf-a3422bf8cf37
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

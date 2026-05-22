@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6322 — Recovery Inhibition (kawa4096)
+// Status: deprecated | Level: high | ID: 1ff3990d-0914-599a-9ebd-de13a7d42d60
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

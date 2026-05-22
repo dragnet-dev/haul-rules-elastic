@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4400 — Mass File Rename (sarcoma)
+// Status: deprecated | Level: high | ID: b16fd513-46bd-53ea-89e6-a586af4c36f1
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

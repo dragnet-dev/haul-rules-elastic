@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-2731 — Mass File Rename (cyclops)
+// Status: deprecated | Level: high | ID: 65116f2e-5bc0-5282-a19a-ea499c66a82f
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

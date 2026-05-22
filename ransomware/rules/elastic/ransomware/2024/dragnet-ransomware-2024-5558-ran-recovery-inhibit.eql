@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5558 — Recovery Inhibition (ElDorado)
+// Status: experimental | Level: high | ID: 2280df70-faba-59c8-82fd-c21e5f5971b6
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

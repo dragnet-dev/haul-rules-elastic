@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3441 — Mass File Rename (lockbit3)
+// Status: deprecated | Level: high | ID: 6d6f9f9a-33ad-5f1d-803c-9d160d7e20f0
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

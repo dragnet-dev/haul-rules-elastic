@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4910 — Mass File Rename (ciphbit)
+// Status: deprecated | Level: high | ID: bda111b1-39e7-5b93-8ab7-014ea15490fb
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

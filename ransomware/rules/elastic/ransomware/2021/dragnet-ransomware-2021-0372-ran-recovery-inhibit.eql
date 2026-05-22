@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0372 — Recovery Inhibition (marketo)
+// Status: deprecated | Level: high | ID: 1a0077dd-69e8-51b9-b0a1-8db4520eafef
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

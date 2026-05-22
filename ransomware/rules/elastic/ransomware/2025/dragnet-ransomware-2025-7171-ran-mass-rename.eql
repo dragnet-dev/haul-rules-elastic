@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7171 — Mass File Rename (kairos)
+// Status: deprecated | Level: high | ID: 6976a63a-803b-5aaa-92fa-ad9ae57a476b
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

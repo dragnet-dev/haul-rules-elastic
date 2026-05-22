@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3665 — Recovery Inhibition (nasirsecurity)
+// Status: experimental | Level: high | ID: 948daa22-a6ab-5711-8849-9b4e0ca54b84
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

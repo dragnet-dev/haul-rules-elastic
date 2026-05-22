@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1456 — Mass File Rename (babuk2)
+// Status: experimental | Level: high | ID: ff7a0317-27ee-557c-9968-d594285f9dbf
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

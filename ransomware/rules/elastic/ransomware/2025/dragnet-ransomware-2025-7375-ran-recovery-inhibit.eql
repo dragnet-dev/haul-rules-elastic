@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7375 — Recovery Inhibition (fog)
+// Status: deprecated | Level: high | ID: 7c1f8057-3598-5468-97f5-4578a18f25dd
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

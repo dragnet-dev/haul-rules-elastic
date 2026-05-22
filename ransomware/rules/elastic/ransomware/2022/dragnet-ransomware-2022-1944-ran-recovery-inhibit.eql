@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1944 — Recovery Inhibition (icefire)
+// Status: deprecated | Level: high | ID: ee8d57fc-350c-5ccb-9461-52492e83e1cd
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

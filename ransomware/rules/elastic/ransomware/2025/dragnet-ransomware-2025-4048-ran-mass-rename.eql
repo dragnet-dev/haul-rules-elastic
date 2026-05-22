@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4048 — Mass File Rename (securotrop)
+// Status: experimental | Level: high | ID: b8f72d61-d9b1-57f6-84c3-ab70a5311400
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

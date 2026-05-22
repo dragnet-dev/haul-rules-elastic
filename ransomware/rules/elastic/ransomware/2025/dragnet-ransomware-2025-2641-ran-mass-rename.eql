@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-2641 — Mass File Rename (minteye)
+// Status: deprecated | Level: high | ID: fbf25bbc-e968-5dff-942b-4f29092ebdab
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-5142 — Mass File Rename (dispossessor)
+// Status: experimental | Level: high | ID: ccc4a7d2-0e34-5586-9a63-60c2b83c2b79
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

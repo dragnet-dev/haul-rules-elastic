@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-2314 — Mass File Rename (stormous)
+// Status: experimental | Level: high | ID: a090c78d-a994-5575-ab53-54a2fd988188
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

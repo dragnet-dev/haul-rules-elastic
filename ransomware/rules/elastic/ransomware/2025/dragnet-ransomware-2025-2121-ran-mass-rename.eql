@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-2121 — Mass File Rename (hellcat)
+// Status: deprecated | Level: high | ID: e68bdfc5-d336-501c-8f06-46d40a0e2b0d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

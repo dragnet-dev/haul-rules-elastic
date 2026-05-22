@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6206 — Mass File Rename (anubis)
+// Status: experimental | Level: high | ID: 3e2c9b4e-c331-50bd-8e9f-d1f74a536c52
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

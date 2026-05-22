@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-3127 — Mass File Rename (kelvinsecurity)
+// Status: deprecated | Level: high | ID: f0f4a2ac-f99c-57dc-8679-9a73cbdb80b9
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

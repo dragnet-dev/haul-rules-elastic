@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-2434 — Recovery Inhibition (thegentlemen)
+// Status: experimental | Level: high | ID: 91170715-9c36-52d3-82ac-c06c27b103a5
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

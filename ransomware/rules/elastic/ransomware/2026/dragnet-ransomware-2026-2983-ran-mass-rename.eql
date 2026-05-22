@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2983 — Mass File Rename (incransom)
+// Status: test | Level: high | ID: fe73e625-43e1-5405-8a76-7986b79540a5
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2708 — Mass File Rename (sparta)
+// Status: deprecated | Level: high | ID: 4a443713-d690-5bb6-b9c2-0438959c0cd1
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1792 — Mass File Rename (avoslocker)
+// Status: deprecated | Level: high | ID: 1327d080-78c9-5dd9-9d74-ed4308e93f4a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

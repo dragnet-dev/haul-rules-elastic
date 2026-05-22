@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-2573 — Mass File Rename (kairos)
+// Status: experimental | Level: high | ID: 1e0fa868-188f-59a5-8062-62ca86cfb7c8
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

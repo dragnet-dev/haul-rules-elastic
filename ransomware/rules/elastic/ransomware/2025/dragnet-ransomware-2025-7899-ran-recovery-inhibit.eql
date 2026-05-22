@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7899 — Recovery Inhibition (anubis)
+// Status: experimental | Level: high | ID: 61d18bde-77b5-56ad-9d52-00793df96367
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

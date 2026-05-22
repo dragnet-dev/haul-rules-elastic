@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-2843 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: f7db80ac-4f11-5ef6-a906-0704571f57cf
+
+network where
+  destination.domain like~ "*http://malas2urovbyyavjzaezkt5ohljvyd5lt7vv7mnsgbf2y4bwlh72doqd.onion/posts/defaulters/*"

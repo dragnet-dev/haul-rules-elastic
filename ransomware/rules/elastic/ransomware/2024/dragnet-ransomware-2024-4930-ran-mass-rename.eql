@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4930 — Mass File Rename (qilin)
+// Status: deprecated | Level: high | ID: 19d218a7-053b-5072-99a1-77f7d3803034
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

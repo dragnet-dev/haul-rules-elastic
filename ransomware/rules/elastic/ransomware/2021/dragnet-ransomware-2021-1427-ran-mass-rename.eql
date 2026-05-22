@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1427 — Mass File Rename (babuk)
+// Status: experimental | Level: high | ID: 5d8d21b8-2394-51ae-8053-f5f38b9e0881
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

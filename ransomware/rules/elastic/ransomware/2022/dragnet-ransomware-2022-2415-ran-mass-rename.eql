@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-2415 — Mass File Rename (darkleakmarket)
+// Status: deprecated | Level: high | ID: 9c039fe8-5a3a-57e0-a1e2-566be8fa4c58
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

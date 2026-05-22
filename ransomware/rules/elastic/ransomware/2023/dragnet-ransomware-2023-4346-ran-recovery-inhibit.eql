@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4346 — Recovery Inhibition (cuba)
+// Status: deprecated | Level: high | ID: bb435191-7a79-5dfa-a8b2-02d2201011ea
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

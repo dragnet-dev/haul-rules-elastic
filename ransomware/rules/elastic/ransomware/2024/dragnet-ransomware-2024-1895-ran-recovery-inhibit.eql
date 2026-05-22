@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-1895 — Recovery Inhibition (raznatovic)
+// Status: experimental | Level: high | ID: 2963b4d2-0082-51de-acbe-eb313b99d36b
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

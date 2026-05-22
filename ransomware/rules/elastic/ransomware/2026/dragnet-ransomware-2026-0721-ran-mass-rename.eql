@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0721 — Mass File Rename (thegentlemen)
+// Status: deprecated | Level: high | ID: 4b62173c-d04f-5983-a837-9627d993df96
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

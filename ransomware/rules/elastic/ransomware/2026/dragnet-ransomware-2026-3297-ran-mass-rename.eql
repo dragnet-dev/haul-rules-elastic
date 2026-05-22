@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3297 — Mass File Rename (kazu)
+// Status: deprecated | Level: high | ID: 8e0b666a-83ad-5aac-ab3a-07fbce7ad5ed
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5892 — Mass File Rename (monti)
+// Status: experimental | Level: high | ID: 15a4175f-b687-516b-b281-8b4f34c4d16d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

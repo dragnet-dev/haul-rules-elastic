@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1976 — Mass File Rename (lamashtu)
+// Status: stable | Level: high | ID: 8c330d31-0ba6-5e51-8c4e-8dff1dfeb6db
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

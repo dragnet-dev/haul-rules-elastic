@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0757 — Recovery Inhibition (azroteam)
+// Status: deprecated | Level: high | ID: af4fd28a-cd6c-553b-be3e-77d55f51a8d4
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

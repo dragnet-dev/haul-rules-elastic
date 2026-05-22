@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-6393 — Mass File Rename (fog)
+// Status: experimental | Level: high | ID: 14c84ed1-47b8-5458-9719-180eee972ab4
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0438 — Mass File Rename (anubis)
+// Status: test | Level: high | ID: 3a79e972-b1e5-5628-9ba5-ba00ae17833a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

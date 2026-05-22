@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0364 — Mass File Rename (karakurt)
+// Status: deprecated | Level: high | ID: aff36e65-7f0f-5e5f-8366-998883568476
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

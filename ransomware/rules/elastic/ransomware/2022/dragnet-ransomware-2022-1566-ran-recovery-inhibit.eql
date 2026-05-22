@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1566 — Recovery Inhibition (alphv)
+// Status: experimental | Level: high | ID: b175b6b1-8e4a-5166-a1e0-234075ec544d
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

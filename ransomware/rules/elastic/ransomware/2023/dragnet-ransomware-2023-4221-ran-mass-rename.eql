@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4221 — Mass File Rename (cloak)
+// Status: deprecated | Level: high | ID: 967d860b-dc3b-51e4-accd-54443baf5c9e
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

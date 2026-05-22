@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4195 — Recovery Inhibition (karakurt)
+// Status: deprecated | Level: high | ID: 55610c56-4f11-5800-828f-b8573de60105
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

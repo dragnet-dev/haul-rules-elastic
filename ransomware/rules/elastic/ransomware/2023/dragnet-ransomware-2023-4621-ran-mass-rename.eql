@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4621 — Mass File Rename (alphv)
+// Status: experimental | Level: high | ID: 329c767e-667f-5882-b307-011b024b8cb7
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

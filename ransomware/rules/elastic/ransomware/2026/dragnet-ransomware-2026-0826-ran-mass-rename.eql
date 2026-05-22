@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0826 — Mass File Rename (termite)
+// Status: stable | Level: high | ID: afc6ff80-83a1-5c73-afe8-d7bd4eb6fed0
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

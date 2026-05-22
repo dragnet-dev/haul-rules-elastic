@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1287 — Recovery Inhibition (everest)
+// Status: experimental | Level: high | ID: fb3d7bc7-718e-570e-b988-6e6751cdfd88
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

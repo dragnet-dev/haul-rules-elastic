@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-3531 — Recovery Inhibition (cicada3301)
+// Status: experimental | Level: high | ID: 3a81bace-a3ec-5e23-92dd-b80fa8d80395
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

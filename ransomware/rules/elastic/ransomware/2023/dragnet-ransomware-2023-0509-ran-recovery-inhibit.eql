@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0509 — Recovery Inhibition (cuba)
+// Status: experimental | Level: high | ID: 399c8630-413d-5781-9a59-6d63f406b55d
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

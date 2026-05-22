@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2442 — Mass File Rename (devman)
+// Status: test | Level: high | ID: 87585e31-71b8-56a4-a6f1-e5241141c442
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

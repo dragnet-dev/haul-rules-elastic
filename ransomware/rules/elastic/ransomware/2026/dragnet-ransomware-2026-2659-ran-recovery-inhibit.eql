@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2659 — Recovery Inhibition (kairos)
+// Status: deprecated | Level: high | ID: ba2032bc-faef-5402-9747-98e0f753221f
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3137 — Recovery Inhibition (siegedsec)
+// Status: deprecated | Level: high | ID: c828023f-39ae-5722-b9dd-0897999b922b
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

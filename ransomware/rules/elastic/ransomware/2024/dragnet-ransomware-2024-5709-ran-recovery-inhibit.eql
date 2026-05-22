@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5709 — Recovery Inhibition (daixin)
+// Status: deprecated | Level: high | ID: f74f37c3-0a1a-5ff0-9f06-36a56deba9b6
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

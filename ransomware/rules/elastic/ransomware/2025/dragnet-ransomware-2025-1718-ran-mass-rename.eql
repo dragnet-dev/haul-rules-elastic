@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1718 — Mass File Rename (bert)
+// Status: experimental | Level: high | ID: 5ff392fd-27c7-5341-b14f-9267f575b00d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

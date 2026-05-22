@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1471 — Mass File Rename (vicesociety)
+// Status: deprecated | Level: high | ID: 70688863-aa56-5ad7-bea2-cc1814de6dfb
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

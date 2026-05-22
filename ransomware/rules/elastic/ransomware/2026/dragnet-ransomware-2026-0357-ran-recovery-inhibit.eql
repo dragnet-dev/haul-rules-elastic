@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0357 — Recovery Inhibition (medusalocker)
+// Status: stable | Level: high | ID: d24a1c2e-47b9-5d03-8d9f-ffb09e9cba7f
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

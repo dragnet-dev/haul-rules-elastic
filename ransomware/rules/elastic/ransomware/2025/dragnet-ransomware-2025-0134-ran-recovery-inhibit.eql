@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0134 — Recovery Inhibition (lynx)
+// Status: experimental | Level: high | ID: e8ee6915-6790-5b0a-8bb8-ae1c206fcbad
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

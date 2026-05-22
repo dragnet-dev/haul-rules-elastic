@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0157 — Recovery Inhibition (insomnia)
+// Status: experimental | Level: high | ID: 178fd7b6-1d67-5f5b-9310-756b33691479
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

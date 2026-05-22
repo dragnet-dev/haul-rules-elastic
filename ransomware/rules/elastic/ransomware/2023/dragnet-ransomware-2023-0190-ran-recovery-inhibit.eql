@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0190 — Recovery Inhibition (cactus)
+// Status: deprecated | Level: high | ID: eb691c36-3c09-5c00-b492-f3c637d1bb66
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

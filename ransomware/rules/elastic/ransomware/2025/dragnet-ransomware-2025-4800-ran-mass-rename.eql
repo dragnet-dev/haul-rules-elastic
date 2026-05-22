@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4800 — Mass File Rename (blacknevas)
+// Status: experimental | Level: high | ID: 8b0cf702-9d72-57af-89a6-4358ce0517fd
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

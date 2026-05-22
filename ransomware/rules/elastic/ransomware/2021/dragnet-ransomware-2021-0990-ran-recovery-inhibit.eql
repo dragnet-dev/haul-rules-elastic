@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0990 — Recovery Inhibition (ronggolawe)
+// Status: deprecated | Level: high | ID: 3cfb326b-e85c-5c3a-8649-8d857027ac7a
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

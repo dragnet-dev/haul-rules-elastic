@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2026-0752 — Ransomware C2 Communication
+// Status: test | Level: high | ID: 361379b4-fe18-5d27-945d-d1819cecb104
+
+network where
+  destination.domain like~ "*http://novadmrkp4vbk2padk5t6pbxolndceuc7hrcq4mjaoyed6nxsqiuzyyd.onion/#cyma*"

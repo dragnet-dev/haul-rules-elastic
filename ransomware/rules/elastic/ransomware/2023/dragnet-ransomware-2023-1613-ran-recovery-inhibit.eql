@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-1613 — Recovery Inhibition (stormous)
+// Status: experimental | Level: high | ID: b270151f-9828-5bbd-b92c-4f4e314918cc
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

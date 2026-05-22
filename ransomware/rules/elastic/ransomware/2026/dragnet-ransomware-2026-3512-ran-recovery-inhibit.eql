@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3512 — Recovery Inhibition (PrinzEugen)
+// Status: stable | Level: high | ID: 805c9681-6fde-5783-9a6c-470d52495ded
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

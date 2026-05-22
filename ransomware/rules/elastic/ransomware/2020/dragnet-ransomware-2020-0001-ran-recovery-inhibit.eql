@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0001 — Recovery Inhibition (sekhmet)
+// Status: deprecated | Level: high | ID: 981d9098-f3d4-577d-90a7-b588971294a1
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

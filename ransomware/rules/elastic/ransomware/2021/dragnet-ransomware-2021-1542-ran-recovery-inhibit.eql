@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1542 — Recovery Inhibition (midas)
+// Status: deprecated | Level: high | ID: 85a9f21f-8b41-53b4-adff-e3171631ce9d
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

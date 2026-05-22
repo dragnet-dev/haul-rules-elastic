@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1560 — Mass File Rename (nova)
+// Status: stable | Level: high | ID: 6c7b8073-6ec8-5cdb-a0da-c4a320c28f38
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

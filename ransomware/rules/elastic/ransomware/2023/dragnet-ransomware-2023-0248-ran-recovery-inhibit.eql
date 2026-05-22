@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0248 — Recovery Inhibition (cyclops)
+// Status: deprecated | Level: high | ID: 706c2e93-8378-543b-b052-2d5620bd2c61
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

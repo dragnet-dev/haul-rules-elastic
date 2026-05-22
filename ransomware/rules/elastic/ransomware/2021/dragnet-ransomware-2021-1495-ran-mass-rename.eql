@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1495 — Mass File Rename (nefilim)
+// Status: deprecated | Level: high | ID: 46f5aff7-9188-5543-83b4-4737e8652c51
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

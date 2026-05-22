@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0173 — Mass File Rename (karma)
+// Status: deprecated | Level: high | ID: 640afd68-3d64-52b3-b1b6-1a022047b03f
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

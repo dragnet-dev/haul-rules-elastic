@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4663 — Mass File Rename (cryptbb)
+// Status: experimental | Level: high | ID: 36fb5c92-1628-5744-8daa-2c5c7af4deb5
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

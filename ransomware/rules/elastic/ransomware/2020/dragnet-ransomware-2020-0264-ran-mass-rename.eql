@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0264 — Mass File Rename (prolock)
+// Status: deprecated | Level: high | ID: 395e2bf5-effe-5394-a4ae-fb715cd1ff95
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4237 — Mass File Rename (VanHelsing)
+// Status: experimental | Level: high | ID: 0f35949d-ad8b-5de1-a75d-a98864804fbb
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

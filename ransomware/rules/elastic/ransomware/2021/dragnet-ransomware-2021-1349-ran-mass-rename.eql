@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1349 — Mass File Rename (conti)
+// Status: deprecated | Level: high | ID: b35561a3-e68c-566c-831b-6e3df95cfdee
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

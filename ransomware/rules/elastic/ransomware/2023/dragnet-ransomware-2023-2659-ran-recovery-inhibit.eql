@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-2659 — Recovery Inhibition (donutleaks)
+// Status: experimental | Level: high | ID: 055ffd6b-a458-5683-a918-79dd11024366
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

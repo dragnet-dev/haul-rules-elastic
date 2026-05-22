@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-6006 — Mass File Rename (snatch)
+// Status: experimental | Level: high | ID: cc9e770d-81c4-5fee-abe7-959db5e0a33d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

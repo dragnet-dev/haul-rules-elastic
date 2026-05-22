@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4226 — Recovery Inhibition (ElDorado)
+// Status: deprecated | Level: high | ID: 8806d832-0696-5ce9-8301-c29959579fdc
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

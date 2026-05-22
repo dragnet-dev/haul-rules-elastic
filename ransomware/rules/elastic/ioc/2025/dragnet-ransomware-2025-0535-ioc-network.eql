@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2025-0535 — Ransomware C2 Communication
+// Status: test | Level: high | ID: 7bb4d2ed-a86e-50d4-a468-543a872cf7a8
+
+network where
+  destination.domain like~ "*http://mpyeixjqjufjki2qg7dutvxk6tjjzv2jf7qc63bljzfqrtbjcdktziqd.onion/index.php?p=*"

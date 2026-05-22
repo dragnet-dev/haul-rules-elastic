@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0193 — Recovery Inhibition (hades)
+// Status: deprecated | Level: high | ID: bbea8e13-886a-5536-ab52-c398f8cff34e
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

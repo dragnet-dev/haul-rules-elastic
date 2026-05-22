@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2901 — Mass File Rename (stormous)
+// Status: deprecated | Level: high | ID: 073008fb-da0b-5d42-bc35-5516ee97827f
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

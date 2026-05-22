@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1777 — Recovery Inhibition (pysa)
+// Status: deprecated | Level: high | ID: cd32555b-9dfe-5365-8be1-10aa5ad35478
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

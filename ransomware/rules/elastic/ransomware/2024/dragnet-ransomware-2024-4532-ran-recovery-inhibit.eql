@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4532 — Recovery Inhibition (nitrogen)
+// Status: experimental | Level: high | ID: 7be67cdc-50b9-5e76-ad1c-a3e5be0ee684
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

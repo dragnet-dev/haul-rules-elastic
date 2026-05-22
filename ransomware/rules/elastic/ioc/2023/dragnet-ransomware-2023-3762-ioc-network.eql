@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-3762 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: e19bf110-c262-5313-9eb8-249b8dd238fe
+
+network where
+  destination.domain like~ "*https://dispossessor.com/blogs/1207*"

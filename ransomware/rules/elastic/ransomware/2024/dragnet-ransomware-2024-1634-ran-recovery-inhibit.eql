@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-1634 — Recovery Inhibition (helldown)
+// Status: experimental | Level: high | ID: f60a6594-9571-53a1-b80b-ee81c383f5f3
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

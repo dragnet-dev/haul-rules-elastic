@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0017 — Recovery Inhibition (doppelpaymer)
+// Status: deprecated | Level: high | ID: ad4f9472-246e-54dd-938c-b48f18c2db1a
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

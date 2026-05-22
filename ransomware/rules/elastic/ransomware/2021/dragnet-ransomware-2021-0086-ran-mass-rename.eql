@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0086 — Mass File Rename (midas)
+// Status: deprecated | Level: high | ID: 33488349-5c83-581d-98ed-afb69f580672
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

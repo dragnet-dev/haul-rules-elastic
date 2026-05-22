@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0868 — Mass File Rename (projectrelic)
+// Status: deprecated | Level: high | ID: 5560c3e2-e71a-52cd-a288-70770cff9981
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

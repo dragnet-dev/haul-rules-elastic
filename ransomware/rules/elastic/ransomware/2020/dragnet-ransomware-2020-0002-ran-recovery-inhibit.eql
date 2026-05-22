@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0002 — Recovery Inhibition (nefilim)
+// Status: deprecated | Level: high | ID: 2b02670f-db38-5527-9a56-e7ea2917f8ca
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

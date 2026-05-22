@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2023-0450 — Ransomware C2 Communication
+// Status: experimental | Level: high | ID: 9d627da3-7257-5773-b5b4-880a64586eb8
+
+network where
+  destination.domain like~ "*https://werewolves.pro/en/emprint.html*"

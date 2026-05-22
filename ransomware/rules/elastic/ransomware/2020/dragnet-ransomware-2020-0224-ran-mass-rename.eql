@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0224 — Mass File Rename (netflim)
+// Status: deprecated | Level: high | ID: 7c4e601e-29e0-5ac7-83e7-b46f3d36ad51
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

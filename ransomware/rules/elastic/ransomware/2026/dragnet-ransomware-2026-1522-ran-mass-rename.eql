@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1522 — Mass File Rename (kittykatkrew)
+// Status: stable | Level: high | ID: 2ccb27a5-941d-562a-b409-965a51a99ffc
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

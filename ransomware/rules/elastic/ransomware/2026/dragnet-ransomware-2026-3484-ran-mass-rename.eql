@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3484 — Mass File Rename (blackwater)
+// Status: stable | Level: high | ID: da24c788-6de8-5361-963d-f5ecf2994503
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

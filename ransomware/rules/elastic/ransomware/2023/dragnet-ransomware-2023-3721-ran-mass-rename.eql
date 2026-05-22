@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-3721 — Mass File Rename (mallox)
+// Status: experimental | Level: high | ID: dd926d20-fe66-5db4-a3dd-ed1b8526e7a2
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

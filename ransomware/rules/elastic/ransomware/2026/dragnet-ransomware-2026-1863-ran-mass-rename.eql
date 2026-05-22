@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1863 — Mass File Rename (tengu)
+// Status: test | Level: high | ID: 04907c72-447f-51cd-87e8-38e990d84384
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0091 — Mass File Rename (genesis)
+// Status: stable | Level: high | ID: a13797f5-eb32-57e9-a370-de4905be98c4
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

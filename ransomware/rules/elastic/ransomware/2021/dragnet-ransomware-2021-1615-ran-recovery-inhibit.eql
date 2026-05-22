@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1615 — Recovery Inhibition (mountlocker)
+// Status: deprecated | Level: high | ID: f15f1879-1a37-51bc-9f2b-6ed58ff31c11
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

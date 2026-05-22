@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0823 — Recovery Inhibition (quantum)
+// Status: deprecated | Level: high | ID: cd718881-bc6d-5507-a5e9-71df81ffd7f6
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

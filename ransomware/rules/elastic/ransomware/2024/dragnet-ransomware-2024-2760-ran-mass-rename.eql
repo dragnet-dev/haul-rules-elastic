@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-2760 — Mass File Rename (termite)
+// Status: experimental | Level: high | ID: 57da3a3f-f398-504b-99ec-4c6ebfe68231
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-2132 — Recovery Inhibition (moneymessage)
+// Status: experimental | Level: high | ID: 819104a3-3dd9-5a6b-92a5-0b7245f46cba
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

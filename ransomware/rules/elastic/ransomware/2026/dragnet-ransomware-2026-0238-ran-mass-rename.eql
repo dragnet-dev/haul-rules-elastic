@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0238 — Mass File Rename (insomnia)
+// Status: stable | Level: high | ID: f10736ce-a21d-56ec-af6b-431efe795696
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

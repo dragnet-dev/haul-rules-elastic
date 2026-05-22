@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3921 — Recovery Inhibition (pear)
+// Status: experimental | Level: high | ID: e2d7e821-7367-5797-9b42-a3ce4c1ac810
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

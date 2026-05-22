@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2580 — Mass File Rename (fulcrumsec)
+// Status: stable | Level: high | ID: 14fa6a44-e7c7-57b8-bb29-55892f31597a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

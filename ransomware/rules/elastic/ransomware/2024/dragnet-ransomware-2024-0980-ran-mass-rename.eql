@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-0980 — Mass File Rename (datacarry)
+// Status: deprecated | Level: high | ID: dc27fb62-cad2-56a5-be28-c5eec0956038
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

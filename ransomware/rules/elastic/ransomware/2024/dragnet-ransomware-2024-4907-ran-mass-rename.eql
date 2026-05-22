@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4907 — Mass File Rename (spacebears)
+// Status: experimental | Level: high | ID: a2ed9370-2404-57a6-88a2-881501790300
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

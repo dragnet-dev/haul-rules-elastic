@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1556 — Mass File Rename (daixin)
+// Status: deprecated | Level: high | ID: 5afde562-a058-561e-bd2a-e4a4fb704473
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

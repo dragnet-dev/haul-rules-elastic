@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-3161 — Mass File Rename (safepay)
+// Status: experimental | Level: high | ID: eba13946-e489-50b1-99cd-c839c49c120e
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

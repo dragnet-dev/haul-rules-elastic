@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0069 — Mass File Rename (suncrypt)
+// Status: deprecated | Level: high | ID: 222f4725-1221-5b94-bf39-499a6e8e54e4
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

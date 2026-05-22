@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4449 — Mass File Rename (kawa4096)
+// Status: experimental | Level: high | ID: fcd84836-71b8-5523-bcef-3189970b50ba
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

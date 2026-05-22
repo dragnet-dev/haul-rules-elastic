@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-2004 — Recovery Inhibition (handala)
+// Status: experimental | Level: high | ID: 94d7bb32-8417-5cc7-a101-528171efb2f8
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

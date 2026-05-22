@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0977 — Mass File Rename (darkleakmarket)
+// Status: deprecated | Level: high | ID: 0e7064f5-1cc8-57e0-a9bb-33ce5989f4b7
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

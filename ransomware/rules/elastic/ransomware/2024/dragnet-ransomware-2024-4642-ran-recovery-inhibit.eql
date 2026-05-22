@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4642 — Recovery Inhibition (sarcoma)
+// Status: experimental | Level: high | ID: 0091d794-0b42-50c2-81d4-785780406101
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

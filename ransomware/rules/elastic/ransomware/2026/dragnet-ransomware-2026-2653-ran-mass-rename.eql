@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2653 — Mass File Rename (m3rx)
+// Status: stable | Level: high | ID: add86164-83de-58c9-a63b-c64e695fa9bc
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

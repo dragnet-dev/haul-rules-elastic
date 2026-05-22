@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4727 — Mass File Rename (lynx)
+// Status: experimental | Level: high | ID: 30587273-6e26-5108-ae9c-9275b4f5f976
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1750 — Mass File Rename (mosesstaff)
+// Status: deprecated | Level: high | ID: 22b01d71-09bb-5b5f-9d67-77c9f9800d8c
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

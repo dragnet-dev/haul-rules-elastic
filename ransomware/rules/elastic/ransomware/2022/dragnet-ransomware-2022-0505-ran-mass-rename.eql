@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0505 — Mass File Rename (lockbit2)
+// Status: deprecated | Level: high | ID: b7a30b4d-3d90-5a9e-8e2e-fec4f834e07a
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

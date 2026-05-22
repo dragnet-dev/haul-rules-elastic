@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2956 — Mass File Rename (payoutsking)
+// Status: stable | Level: high | ID: 475ccfdd-62c5-58f6-8067-f24bcef6b285
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

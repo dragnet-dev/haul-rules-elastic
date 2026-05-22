@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1134 — Mass File Rename (avaddon)
+// Status: deprecated | Level: high | ID: 5609e8fd-5635-5ca9-a8bb-32bd654326e7
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

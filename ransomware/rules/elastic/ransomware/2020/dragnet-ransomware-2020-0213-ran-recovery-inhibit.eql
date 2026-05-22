@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0213 — Recovery Inhibition (wastedlocker)
+// Status: deprecated | Level: high | ID: 62652ac0-c74b-57ae-b454-f145640be59b
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

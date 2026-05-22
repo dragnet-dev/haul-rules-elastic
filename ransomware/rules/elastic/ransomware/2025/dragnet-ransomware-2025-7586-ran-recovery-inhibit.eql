@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7586 — Recovery Inhibition (killsec)
+// Status: experimental | Level: high | ID: f06841a7-255b-5cb6-bbf0-3b4ba9f49657
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-4578 — Mass File Rename (akira)
+// Status: deprecated | Level: high | ID: a33cdbcb-a94a-5fcd-9701-09d0272558f9
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

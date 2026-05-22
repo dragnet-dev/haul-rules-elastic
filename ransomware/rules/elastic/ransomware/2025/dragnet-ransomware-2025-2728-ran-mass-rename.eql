@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-2728 — Mass File Rename (lunalock)
+// Status: experimental | Level: high | ID: 3b46165b-40a3-5399-8ce5-1429640b1a15
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

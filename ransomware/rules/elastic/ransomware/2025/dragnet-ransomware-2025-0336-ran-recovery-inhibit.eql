@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0336 — Recovery Inhibition (shinyhunters)
+// Status: experimental | Level: high | ID: 410a4753-4900-57c0-9c69-4247204d73a6
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

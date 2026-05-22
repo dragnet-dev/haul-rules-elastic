@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0100 — Recovery Inhibition (ryuk)
+// Status: deprecated | Level: high | ID: 98a6eed4-a892-55ea-b918-a9db265e2818
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

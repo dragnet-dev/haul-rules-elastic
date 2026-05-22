@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-5818 — Mass File Rename (mogilevich)
+// Status: deprecated | Level: high | ID: 31f92f3d-3794-50ee-835f-d442e1e17745
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

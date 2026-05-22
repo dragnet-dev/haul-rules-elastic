@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0491 — Recovery Inhibition (ransomexx)
+// Status: experimental | Level: high | ID: 0c105bd2-e3cb-50f8-901f-521f558406f8
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

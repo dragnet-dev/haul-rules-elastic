@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0038 — Mass File Rename (insomnia)
+// Status: experimental | Level: high | ID: ad81d2e8-7bb2-5e07-819a-a453f5f3dbed
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

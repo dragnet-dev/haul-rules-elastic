@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-4200 — Mass File Rename (nightspire)
+// Status: experimental | Level: high | ID: 2094f384-33bb-5d68-a7f0-4c4b273bf1ff
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

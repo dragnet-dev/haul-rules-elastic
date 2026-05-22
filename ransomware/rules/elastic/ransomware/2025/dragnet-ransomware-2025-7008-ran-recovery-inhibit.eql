@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-7008 — Recovery Inhibition (dragonforce)
+// Status: experimental | Level: high | ID: 65a26be1-89cb-5acf-8fab-55a186757782
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0154 — Mass File Rename (ryuk)
+// Status: deprecated | Level: high | ID: 793baa7a-f2cf-598a-82c5-318e6dba9dd6
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

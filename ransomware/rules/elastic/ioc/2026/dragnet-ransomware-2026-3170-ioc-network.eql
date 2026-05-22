@@ -1,0 +1,5 @@
+// Dragnet [Ransomware/IOC]: dragnet-ransomware-2026-3170 — Ransomware C2 Communication
+// Status: stable | Level: high | ID: a31a3249-11dc-55f2-8722-9ee367878f93
+
+network where
+  destination.domain like~ "*http://3cpc3v57l7rstjtaelxgnlrzsolz7pd6ltsygjo2tjuonxteyaba2pid.onion/index.php?p=*"

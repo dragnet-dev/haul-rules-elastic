@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-2335 — Recovery Inhibition (aurora)
+// Status: stable | Level: high | ID: c3ecb8b8-738d-5f8c-8441-6c52e49a6a3e
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

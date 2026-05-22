@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-1422 — Mass File Rename (gunra)
+// Status: deprecated | Level: high | ID: cfec336f-2daf-5865-9ced-ff0f0b40407d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

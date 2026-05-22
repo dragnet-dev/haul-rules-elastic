@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-1512 — Recovery Inhibition (leaktheanalyst)
+// Status: deprecated | Level: high | ID: 1b9bcdc7-ca7d-5add-9251-72947a51c621
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

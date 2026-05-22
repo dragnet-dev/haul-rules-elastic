@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0116 — Mass File Rename (quantum)
+// Status: deprecated | Level: high | ID: cfc56379-9eb4-5446-8afa-5ae1265888a8
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

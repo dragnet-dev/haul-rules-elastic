@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-1031 — Recovery Inhibition (atomsilo)
+// Status: deprecated | Level: high | ID: db0d6b9b-3685-548f-b5af-eda5708aa53f
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-0787 — Mass File Rename (cmdorganization)
+// Status: deprecated | Level: high | ID: 2c6eba4f-7043-57b7-8609-18d85044ae05
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

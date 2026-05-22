@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0107 — Mass File Rename (maze)
+// Status: experimental | Level: high | ID: 6d6ef5d2-783a-515e-9dad-04b22f083c02
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

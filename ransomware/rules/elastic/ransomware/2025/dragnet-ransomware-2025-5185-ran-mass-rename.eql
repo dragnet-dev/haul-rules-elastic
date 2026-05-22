@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-5185 — Mass File Rename (blackshrantac)
+// Status: experimental | Level: high | ID: cee75072-cabb-5ee8-9910-e0fe235c2310
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

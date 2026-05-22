@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-0864 — Recovery Inhibition (sparta)
+// Status: deprecated | Level: high | ID: ab072a2f-dfe8-5077-9ed7-1287294c813d
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

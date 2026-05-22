@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3163 — Mass File Rename (satanlockv2)
+// Status: experimental | Level: high | ID: 43af33ed-7fda-5a7c-83dc-ee99e690959f
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

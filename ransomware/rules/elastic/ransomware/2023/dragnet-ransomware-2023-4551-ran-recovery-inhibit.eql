@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4551 — Recovery Inhibition (moneymessage)
+// Status: deprecated | Level: high | ID: 814337d0-3b7f-5e9d-b476-39c2a44d2394
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

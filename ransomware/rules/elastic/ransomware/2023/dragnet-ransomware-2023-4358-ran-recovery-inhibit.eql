@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-4358 — Recovery Inhibition (ciphbit)
+// Status: deprecated | Level: high | ID: fc54f78e-947a-5965-b114-769bf9a53752
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0196 — Mass File Rename (netwalker)
+// Status: deprecated | Level: high | ID: bd7b5e26-484d-590c-b74d-9af1edd99bdb
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

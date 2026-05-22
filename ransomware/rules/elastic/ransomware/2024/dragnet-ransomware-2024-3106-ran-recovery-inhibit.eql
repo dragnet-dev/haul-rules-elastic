@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-3106 — Recovery Inhibition (dragonforce)
+// Status: deprecated | Level: high | ID: fc7f055b-bcd1-5530-8d85-482ead9942d3
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-0108 — Mass File Rename (incransom)
+// Status: experimental | Level: high | ID: e5765391-764a-5118-9c5d-99bfbcbe1fcf
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

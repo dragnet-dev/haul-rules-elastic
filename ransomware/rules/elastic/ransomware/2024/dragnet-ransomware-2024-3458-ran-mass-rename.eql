@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2024-3458 — Mass File Rename (madliberator)
+// Status: experimental | Level: high | ID: a9abf114-9e65-5aee-a97e-577472005e5e
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

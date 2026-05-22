@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1019 — Mass File Rename (safepay)
+// Status: experimental | Level: high | ID: 9fcdaaa2-0240-56b4-a0f0-21522073b715
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

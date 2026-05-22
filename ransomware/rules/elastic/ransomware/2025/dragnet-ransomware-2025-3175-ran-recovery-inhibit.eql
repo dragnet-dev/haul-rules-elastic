@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-3175 — Recovery Inhibition (incransom)
+// Status: experimental | Level: high | ID: c1ecac22-dc69-529d-8bb5-e6d7dc4f3db1
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

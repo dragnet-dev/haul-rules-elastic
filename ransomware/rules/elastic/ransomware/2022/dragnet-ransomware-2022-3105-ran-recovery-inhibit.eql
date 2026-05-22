@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2022-3105 — Recovery Inhibition (yanluowang)
+// Status: deprecated | Level: high | ID: 63fd5fde-13e9-50ef-9ac0-8f7223e8c9d9
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

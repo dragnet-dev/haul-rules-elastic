@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2025-1433 — Recovery Inhibition (blackshrantac)
+// Status: experimental | Level: high | ID: 5db49be7-cfb6-5d52-a743-9fa8fdafba60
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

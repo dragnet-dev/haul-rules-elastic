@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0175 — Mass File Rename (deathkitty)
+// Status: deprecated | Level: high | ID: 459579f8-cb92-5e81-80d6-5b5bb30484bb
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

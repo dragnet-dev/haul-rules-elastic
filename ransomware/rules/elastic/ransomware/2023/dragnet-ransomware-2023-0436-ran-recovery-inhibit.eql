@@ -1,0 +1,6 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-0436 — Recovery Inhibition (stormous)
+// Status: deprecated | Level: high | ID: 0654b39d-abbe-55b2-8bf0-39cfca88bef9
+
+process where
+  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
+  (process.executable like~ "*\bcdedit.exe")

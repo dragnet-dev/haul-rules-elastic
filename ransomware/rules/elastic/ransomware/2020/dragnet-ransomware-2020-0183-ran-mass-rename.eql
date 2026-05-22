@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2020-0183 — Mass File Rename (doppelpaymer)
+// Status: deprecated | Level: high | ID: ffc6b896-5477-5c89-b5d3-cbde9c8c9957
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

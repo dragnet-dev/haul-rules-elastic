@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2023-2262 — Mass File Rename (siegedsec)
+// Status: experimental | Level: high | ID: 8aee5d1f-1bad-5296-a751-3d10c5733586
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2026-3167 — Mass File Rename (bravox)
+// Status: stable | Level: high | ID: 45d3132e-dcd8-5c42-9e3a-d3ac6c15965d
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

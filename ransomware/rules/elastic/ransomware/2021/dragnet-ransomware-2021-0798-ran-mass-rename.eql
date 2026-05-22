@@ -1,0 +1,5 @@
+// Dragnet [Ransomware]: dragnet-ransomware-2021-0798 — Mass File Rename (ragnarlocker)
+// Status: deprecated | Level: high | ID: ec525420-e36a-5fd2-a2a4-e7d006ed9606
+
+any where
+  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")
