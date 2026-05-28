@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-3843 — Recovery Inhibition (monti)
-// Status: experimental | Level: high | ID: aa11e9fe-cce7-589c-b466-e38e821f4744
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

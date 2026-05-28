@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0204 — Recovery Inhibition (thanos)
-// Status: deprecated | Level: high | ID: dabd0487-d230-59d2-bf33-b3050dc53328
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

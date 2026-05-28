@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-2310 — Recovery Inhibition (termite)
-// Status: experimental | Level: high | ID: d61c8b4d-7a89-53eb-8908-eda427a0772e
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

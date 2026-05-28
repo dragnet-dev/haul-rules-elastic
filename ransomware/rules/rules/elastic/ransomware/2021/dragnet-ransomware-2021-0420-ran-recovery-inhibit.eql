@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0420 — Recovery Inhibition (darkside)
-// Status: deprecated | Level: high | ID: 40d1076e-003c-575b-aceb-a43e166b3825
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

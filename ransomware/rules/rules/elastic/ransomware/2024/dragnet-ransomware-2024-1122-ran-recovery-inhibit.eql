@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-1122 — Recovery Inhibition (fog)
-// Status: experimental | Level: high | ID: dc3e34d7-a23b-5324-bdf1-6c9dddfe3d04
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-5278 — Recovery Inhibition (vicesociety)
-// Status: experimental | Level: high | ID: 1ec4e8c2-bdaa-59e6-be8a-a568343ed67c
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

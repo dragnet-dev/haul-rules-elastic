@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0232 — Recovery Inhibition (doppelpaymer)
-// Status: deprecated | Level: high | ID: 22bdf385-8c82-5975-a88d-7c8549f833de
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

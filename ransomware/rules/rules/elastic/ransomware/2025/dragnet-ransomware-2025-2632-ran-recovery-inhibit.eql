@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-2632 — Recovery Inhibition (AiLock)
-// Status: deprecated | Level: high | ID: c6dca7fa-c3ad-5669-ad35-87651ac7bf24
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

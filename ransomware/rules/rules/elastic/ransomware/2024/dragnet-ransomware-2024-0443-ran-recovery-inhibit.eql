@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-0443 — Recovery Inhibition (sarcoma)
-// Status: deprecated | Level: high | ID: 6e94eb95-ed1e-5261-ab38-9dc52b281931
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

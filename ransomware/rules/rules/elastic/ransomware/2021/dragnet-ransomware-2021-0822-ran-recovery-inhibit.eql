@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0822 — Recovery Inhibition (lorenz)
-// Status: deprecated | Level: high | ID: 9906a575-3067-51fa-8a2c-e48542193b22
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

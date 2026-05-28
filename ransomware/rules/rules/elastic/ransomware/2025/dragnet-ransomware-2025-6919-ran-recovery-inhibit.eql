@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-6919 — Recovery Inhibition (blacknevas)
-// Status: experimental | Level: high | ID: c85a19de-c408-54e3-b2c7-fd390b640364
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

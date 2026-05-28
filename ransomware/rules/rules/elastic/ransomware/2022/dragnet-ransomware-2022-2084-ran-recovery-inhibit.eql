@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-2084 — Recovery Inhibition (medusalocker)
-// Status: deprecated | Level: high | ID: 2850f534-d38a-5578-b426-7276008b10d8
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-3216 — Recovery Inhibition (handala)
-// Status: stable | Level: high | ID: 14cd1d7d-762b-5db4-a1b5-6448de417f91
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

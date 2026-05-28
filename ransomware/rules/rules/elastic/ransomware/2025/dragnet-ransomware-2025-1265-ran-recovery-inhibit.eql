@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-1265 — Recovery Inhibition (payoutsking)
-// Status: experimental | Level: high | ID: 96045015-74c9-5cf9-a2fb-fbfe30f9df4c
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

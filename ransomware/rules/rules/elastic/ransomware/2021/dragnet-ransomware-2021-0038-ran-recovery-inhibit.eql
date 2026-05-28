@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0038 — Recovery Inhibition (blackmatter)
-// Status: deprecated | Level: high | ID: 0349796c-8134-5a93-9517-54264cde1586
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

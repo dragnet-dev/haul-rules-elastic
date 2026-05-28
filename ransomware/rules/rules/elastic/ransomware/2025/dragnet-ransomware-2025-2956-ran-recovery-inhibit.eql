@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-2956 — Recovery Inhibition (embargo)
-// Status: experimental | Level: high | ID: f8fc7c5f-c187-529f-8b98-2f744c346030
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

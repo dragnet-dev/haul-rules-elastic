@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-4137 — Recovery Inhibition (raworld)
-// Status: experimental | Level: high | ID: 5dd05730-47ff-5a5e-b52a-968ffb8c83b7
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

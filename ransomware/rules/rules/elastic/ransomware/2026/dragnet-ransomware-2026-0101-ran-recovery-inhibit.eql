@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0101 — Recovery Inhibition (fulcrumsec)
-// Status: stable | Level: high | ID: d9834d3d-ef86-5729-99e7-7cf3ba1a3c7b
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

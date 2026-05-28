@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-6948 — Recovery Inhibition (cephalus)
-// Status: experimental | Level: high | ID: 2c4a3b01-a22e-5bc6-8a67-3acb373c2ad6
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

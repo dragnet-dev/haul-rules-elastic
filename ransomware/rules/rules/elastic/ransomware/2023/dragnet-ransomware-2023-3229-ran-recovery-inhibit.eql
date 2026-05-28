@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-3229 — Recovery Inhibition (bianlian)
-// Status: experimental | Level: high | ID: 76725ad6-54f0-5423-8f42-b846af0023ef
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

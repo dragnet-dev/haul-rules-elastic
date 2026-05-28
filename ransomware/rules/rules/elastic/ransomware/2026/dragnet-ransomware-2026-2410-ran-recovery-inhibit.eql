@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-2410 — Recovery Inhibition (lapsus$)
-// Status: deprecated | Level: high | ID: a14fd788-10c2-54fa-882b-e0877bed925e
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

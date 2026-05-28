@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-3829 — Recovery Inhibition (rhysida)
-// Status: deprecated | Level: high | ID: b0099675-71e8-50b3-a6e9-e7924e999c7c
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

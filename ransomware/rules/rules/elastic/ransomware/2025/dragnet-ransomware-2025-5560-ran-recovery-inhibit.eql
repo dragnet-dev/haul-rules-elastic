@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-5560 — Recovery Inhibition (dunghill)
-// Status: experimental | Level: high | ID: 99171fd3-3c02-5be8-aac5-aa5c7696a5c8
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

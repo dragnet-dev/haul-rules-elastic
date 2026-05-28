@@ -1,5 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0391 — Mass File Rename (interlock)
-// Status: test | Level: high | ID: f7ab7e89-162d-5e8e-80e7-1f96580f851f
-
-any where
-  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

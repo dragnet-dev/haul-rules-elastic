@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-7171 — Recovery Inhibition (kairos)
-// Status: deprecated | Level: high | ID: bb6a8eca-020d-5de9-9866-e5c9f0dd3567
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

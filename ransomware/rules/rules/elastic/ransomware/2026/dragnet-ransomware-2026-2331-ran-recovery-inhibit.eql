@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-2331 — Recovery Inhibition (shadowbyt3$)
-// Status: deprecated | Level: high | ID: 5c332f62-7be0-5c72-aa10-03b0541aea6a
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

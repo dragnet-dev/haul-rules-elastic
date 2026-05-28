@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-0951 — Recovery Inhibition (mallox)
-// Status: experimental | Level: high | ID: 7bc75c37-aaa0-56e4-ba98-80c823931867
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

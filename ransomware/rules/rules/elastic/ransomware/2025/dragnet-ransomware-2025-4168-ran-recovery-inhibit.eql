@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-4168 — Recovery Inhibition (d4rk4rmy)
-// Status: deprecated | Level: high | ID: 57bdb620-9892-52e5-a636-55a2a58a45cc
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

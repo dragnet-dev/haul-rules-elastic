@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-3093 — Recovery Inhibition (insomnia)
-// Status: experimental | Level: high | ID: a4a53bf0-01cc-5186-80c5-dd7cb7bd59e3
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-0953 — Recovery Inhibition (dispossessor)
-// Status: experimental | Level: high | ID: b4cfdf4a-e916-5a45-af17-d6c0c5873e0f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

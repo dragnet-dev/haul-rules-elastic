@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-1167 — Recovery Inhibition (bonacigroup)
-// Status: deprecated | Level: high | ID: ce2a3731-e7bc-5775-94a7-317a97be237a
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

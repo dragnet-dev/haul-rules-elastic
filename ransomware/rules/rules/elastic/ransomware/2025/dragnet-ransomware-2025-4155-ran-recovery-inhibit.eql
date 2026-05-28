@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-4155 — Recovery Inhibition (akira)
-// Status: deprecated | Level: high | ID: 6c985c11-555b-56cd-aa87-ed1aaff7cfc1
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

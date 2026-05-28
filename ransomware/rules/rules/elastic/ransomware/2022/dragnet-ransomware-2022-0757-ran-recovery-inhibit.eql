@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-0757 — Recovery Inhibition (projectrelic)
-// Status: deprecated | Level: high | ID: 9616821a-82b8-5128-81f8-963f83727651
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

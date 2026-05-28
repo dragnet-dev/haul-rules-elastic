@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-3982 — Recovery Inhibition (minteye)
-// Status: deprecated | Level: high | ID: 23a09a5a-77e4-5859-9a22-aaa5183241d5
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

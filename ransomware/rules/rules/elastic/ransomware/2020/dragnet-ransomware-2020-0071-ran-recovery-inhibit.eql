@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0071 — Recovery Inhibition (revil)
-// Status: deprecated | Level: high | ID: 104580c3-a57e-5f13-b01c-f077bb21de5d
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

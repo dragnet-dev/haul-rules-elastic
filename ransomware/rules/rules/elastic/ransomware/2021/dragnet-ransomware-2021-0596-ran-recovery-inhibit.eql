@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0596 — Recovery Inhibition (spook)
-// Status: deprecated | Level: high | ID: 17071a1e-74c3-50ea-8008-173c7a90d738
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

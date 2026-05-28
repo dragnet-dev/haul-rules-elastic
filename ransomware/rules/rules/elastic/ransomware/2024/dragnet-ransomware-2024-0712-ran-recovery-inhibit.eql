@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-0712 — Recovery Inhibition (datacarry)
-// Status: deprecated | Level: high | ID: 9b6b30cd-cfcc-5b3c-af2f-b6940c4437ed
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

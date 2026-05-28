@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-1119 — Recovery Inhibition (trisec)
-// Status: experimental | Level: high | ID: e4c8697a-98c6-5324-b7db-ab381995f26f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

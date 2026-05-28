@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-0601 — Recovery Inhibition (medusa)
-// Status: experimental | Level: high | ID: 3fe6280c-dd1c-5dfc-86b8-b61d10d86e26
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

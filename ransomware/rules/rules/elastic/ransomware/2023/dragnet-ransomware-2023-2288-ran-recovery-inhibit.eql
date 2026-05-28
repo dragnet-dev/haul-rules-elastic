@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-2288 — Recovery Inhibition (losttrust)
-// Status: deprecated | Level: high | ID: 2e56f664-9be4-5bfd-b5af-f700b53d617f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

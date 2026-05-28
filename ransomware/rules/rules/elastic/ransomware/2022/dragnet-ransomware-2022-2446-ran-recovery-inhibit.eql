@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-2446 — Recovery Inhibition (ragnarlocker)
-// Status: experimental | Level: high | ID: 0c8b6c9f-dfe6-5407-95f4-e687e6db7c64
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

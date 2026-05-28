@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-5031 — Recovery Inhibition (interlock)
-// Status: experimental | Level: high | ID: 6749cd06-5a15-5627-aa78-f1e211ba3830
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

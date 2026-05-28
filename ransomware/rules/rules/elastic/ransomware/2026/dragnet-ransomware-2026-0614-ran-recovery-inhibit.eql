@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0614 — Recovery Inhibition (lamashtu)
-// Status: stable | Level: high | ID: cd3a687b-9543-5912-829c-d12203d945e8
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

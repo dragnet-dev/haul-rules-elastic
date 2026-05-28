@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-3458 — Recovery Inhibition (madliberator)
-// Status: experimental | Level: high | ID: 45a927b8-ef01-5ab3-aa6e-e4aeba3e9edf
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

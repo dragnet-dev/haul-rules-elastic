@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-4100 — Recovery Inhibition (nokoyawa)
-// Status: experimental | Level: high | ID: dfc9894d-7e7d-5b8b-a7b7-567be123e076
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

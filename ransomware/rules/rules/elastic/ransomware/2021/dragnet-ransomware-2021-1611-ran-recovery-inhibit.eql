@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-1611 — Recovery Inhibition (blacktor)
-// Status: deprecated | Level: high | ID: 035d0774-8f8e-57eb-8417-fdab0754d660
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-2330 — Recovery Inhibition (kelvinsecurity)
-// Status: deprecated | Level: high | ID: d6c97e89-fcbb-5cc1-8fcd-9d4206e27d52
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

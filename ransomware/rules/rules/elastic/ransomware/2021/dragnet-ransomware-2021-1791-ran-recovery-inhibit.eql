@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-1791 — Recovery Inhibition (alphv)
-// Status: deprecated | Level: high | ID: 199b518a-ac30-596c-b9ea-4eab755f9f6e
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

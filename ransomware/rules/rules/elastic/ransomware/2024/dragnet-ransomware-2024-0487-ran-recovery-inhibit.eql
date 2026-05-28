@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-0487 — Recovery Inhibition (spacebears)
-// Status: experimental | Level: high | ID: 69d7d383-f591-564e-a5fd-23d5c675fc53
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

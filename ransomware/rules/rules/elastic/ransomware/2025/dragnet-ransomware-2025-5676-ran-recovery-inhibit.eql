@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-5676 — Recovery Inhibition (payoutsking)
-// Status: deprecated | Level: high | ID: cba2c5ad-f6c4-5998-aea0-1ffd3406c19c
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

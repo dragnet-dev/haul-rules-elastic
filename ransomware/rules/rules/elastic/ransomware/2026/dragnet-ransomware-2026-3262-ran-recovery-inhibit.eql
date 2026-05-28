@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-3262 — Recovery Inhibition (anubis)
-// Status: stable | Level: high | ID: 11d90ef1-5c2e-5780-a8fe-62dd7d0a682d
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

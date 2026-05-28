@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-4623 — Recovery Inhibition (arvinclub)
-// Status: deprecated | Level: high | ID: a0d82181-647b-56ae-9ec9-f75c66c49d24
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

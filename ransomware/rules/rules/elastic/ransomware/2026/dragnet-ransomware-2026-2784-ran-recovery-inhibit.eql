@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-2784 — Recovery Inhibition (benzona)
-// Status: deprecated | Level: high | ID: 0f071c4b-c4a4-5e2c-9239-3246302e9397
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

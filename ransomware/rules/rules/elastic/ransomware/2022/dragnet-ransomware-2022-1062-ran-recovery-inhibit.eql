@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-1062 — Recovery Inhibition (donutleaks)
-// Status: experimental | Level: high | ID: 1187e881-a3d7-5d29-975f-2498a49356ca
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

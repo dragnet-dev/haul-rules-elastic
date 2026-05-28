@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-1944 — Recovery Inhibition (safepay)
-// Status: experimental | Level: high | ID: be791de8-af72-5f25-88e5-d5dfc2bbaa03
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0814 — Recovery Inhibition (babuk)
-// Status: deprecated | Level: high | ID: 7e6460e2-5041-569d-ac1c-5655744eb3a1
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

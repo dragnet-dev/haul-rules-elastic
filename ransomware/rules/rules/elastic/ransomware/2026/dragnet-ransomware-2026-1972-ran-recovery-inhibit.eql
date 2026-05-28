@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-1972 — Recovery Inhibition (BrainCipher)
-// Status: stable | Level: high | ID: 039dfae4-0144-5bbc-905c-351e195f076f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

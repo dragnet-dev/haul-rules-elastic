@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-1211 — Recovery Inhibition (avoslocker)
-// Status: deprecated | Level: high | ID: 1e4ab39c-9d91-50f8-b325-e3357c90fad1
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-2333 — Recovery Inhibition (rhysida)
-// Status: experimental | Level: high | ID: 71899703-9ee0-5eb1-ba2c-48d380bde994
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

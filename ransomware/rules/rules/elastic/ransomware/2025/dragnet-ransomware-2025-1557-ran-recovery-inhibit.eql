@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-1557 — Recovery Inhibition (arcusmedia)
-// Status: experimental | Level: high | ID: 9f1142dc-3d2f-5a68-8ad4-af6939adb9a0
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

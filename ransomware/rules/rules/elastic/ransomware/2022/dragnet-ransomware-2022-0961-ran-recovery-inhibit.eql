@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-0961 — Recovery Inhibition (darkleakmarket)
-// Status: deprecated | Level: high | ID: d516133d-a49e-548b-8c75-1e562982c98d
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

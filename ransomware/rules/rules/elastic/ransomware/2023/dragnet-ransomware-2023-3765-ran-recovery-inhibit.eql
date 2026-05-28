@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-3765 — Recovery Inhibition (siegedsec)
-// Status: deprecated | Level: high | ID: 6c4116e9-c72c-521e-a995-8aeb1c874e24
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

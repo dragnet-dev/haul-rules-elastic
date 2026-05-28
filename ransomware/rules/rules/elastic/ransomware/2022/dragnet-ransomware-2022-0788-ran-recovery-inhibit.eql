@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-0788 — Recovery Inhibition (donutleaks)
-// Status: deprecated | Level: high | ID: 8527fab9-1cbb-5e8d-8f9e-c774324a9e23
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

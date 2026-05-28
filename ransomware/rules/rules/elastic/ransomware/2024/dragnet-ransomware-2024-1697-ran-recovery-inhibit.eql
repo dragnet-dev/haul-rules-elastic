@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-1697 — Recovery Inhibition (vanirgroup)
-// Status: deprecated | Level: high | ID: 07ae18ff-386e-56a0-95e7-bd31c9a641c4
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

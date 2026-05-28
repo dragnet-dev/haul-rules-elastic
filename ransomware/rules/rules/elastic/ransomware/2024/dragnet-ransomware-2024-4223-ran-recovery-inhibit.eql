@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-4223 — Recovery Inhibition (safepay)
-// Status: deprecated | Level: high | ID: 38f5e00a-082f-5b9b-b3b1-aa8bb85ab718
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

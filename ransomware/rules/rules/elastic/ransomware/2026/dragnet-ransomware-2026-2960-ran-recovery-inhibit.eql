@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-2960 — Recovery Inhibition (secpo)
-// Status: stable | Level: high | ID: 36f96110-6e8e-5e86-b6aa-86f9af4562cd
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

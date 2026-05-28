@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-1085 — Recovery Inhibition (freecivilian)
-// Status: deprecated | Level: high | ID: c9b7faff-f40f-5980-ac70-2308cc401cf3
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

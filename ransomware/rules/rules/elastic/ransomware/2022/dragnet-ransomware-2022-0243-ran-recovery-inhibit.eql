@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-0243 — Recovery Inhibition (mallox)
-// Status: deprecated | Level: high | ID: f80f6944-130f-5684-93c9-b7846e741ebb
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

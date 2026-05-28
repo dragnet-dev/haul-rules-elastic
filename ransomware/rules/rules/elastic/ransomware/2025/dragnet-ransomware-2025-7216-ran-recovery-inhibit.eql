@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-7216 — Recovery Inhibition (skira)
-// Status: experimental | Level: high | ID: 7f1e0ec9-1332-5b6d-a22b-ff9d935db03e
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

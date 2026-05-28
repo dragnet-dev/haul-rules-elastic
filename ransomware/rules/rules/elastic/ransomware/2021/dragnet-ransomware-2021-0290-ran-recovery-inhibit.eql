@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0290 — Recovery Inhibition (macaw)
-// Status: deprecated | Level: high | ID: f8eeb524-c0e1-52d7-81b1-fc2495531f51
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

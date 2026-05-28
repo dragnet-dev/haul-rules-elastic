@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-2329 — Recovery Inhibition (krybit)
-// Status: stable | Level: high | ID: 2e555ada-9997-59f7-9c07-197c792d04b0
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

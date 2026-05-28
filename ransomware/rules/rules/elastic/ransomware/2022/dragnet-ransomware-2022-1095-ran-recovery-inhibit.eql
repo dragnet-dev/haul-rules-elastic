@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-1095 — Recovery Inhibition (nightsky)
-// Status: deprecated | Level: high | ID: e0ac0601-c023-5c56-a25e-787fc9f25a32
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

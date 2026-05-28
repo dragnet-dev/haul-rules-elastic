@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-5041 — Recovery Inhibition (flocker)
-// Status: experimental | Level: high | ID: 78050e68-a432-5571-b758-c69f19a9eb5e
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

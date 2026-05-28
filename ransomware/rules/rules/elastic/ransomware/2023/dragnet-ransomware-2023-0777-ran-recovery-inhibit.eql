@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-0777 — Recovery Inhibition (clop)
-// Status: experimental | Level: high | ID: b79488d6-0ed4-5b48-ac9e-4dfa059d29be
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

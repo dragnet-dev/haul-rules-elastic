@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-2318 — Recovery Inhibition (royal)
-// Status: deprecated | Level: high | ID: 7200363d-2686-548a-9e00-a0dd2996f620
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

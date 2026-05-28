@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0942 — Recovery Inhibition (thegentlemen)
-// Status: deprecated | Level: high | ID: 73e93e48-b876-52b9-9d38-8a45a7e17ca1
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

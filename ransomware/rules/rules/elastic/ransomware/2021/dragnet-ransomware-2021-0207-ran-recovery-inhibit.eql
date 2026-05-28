@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0207 — Recovery Inhibition (snatch)
-// Status: deprecated | Level: high | ID: 24e4a92b-f87f-5bc6-95e4-1e4529873a81
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

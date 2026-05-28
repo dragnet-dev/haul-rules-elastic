@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0172 — Recovery Inhibition (ransomexx)
-// Status: deprecated | Level: high | ID: 1f0ae5cd-bd18-5f12-bca1-208bce21f2ae
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-5581 — Recovery Inhibition (yurei)
-// Status: experimental | Level: high | ID: ad612a66-4154-5415-841e-2c9a0c1ff91c
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

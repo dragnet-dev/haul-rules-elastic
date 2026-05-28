@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0274 — Recovery Inhibition (coinbasecartel)
-// Status: stable | Level: high | ID: 827891a5-6bec-532c-894e-e40a701a7fc3
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

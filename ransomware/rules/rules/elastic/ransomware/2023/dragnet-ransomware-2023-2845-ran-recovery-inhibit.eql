@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-2845 — Recovery Inhibition (malas)
-// Status: experimental | Level: high | ID: 492d71b5-40ef-5fe4-bd0f-4795d8a71a4a
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

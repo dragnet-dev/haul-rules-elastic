@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0465 — Recovery Inhibition (sabbath)
-// Status: deprecated | Level: high | ID: b27c9317-e022-5e37-9edb-cbd66eb61c44
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

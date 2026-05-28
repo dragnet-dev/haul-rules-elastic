@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-2596 — Recovery Inhibition (apt73)
-// Status: stable | Level: high | ID: 27d52059-daa4-5f3d-a532-a26b38d2e0a9
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

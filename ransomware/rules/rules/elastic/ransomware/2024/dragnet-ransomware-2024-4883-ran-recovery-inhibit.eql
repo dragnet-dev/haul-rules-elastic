@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-4883 — Recovery Inhibition (killsec)
-// Status: experimental | Level: high | ID: 12c55167-8f57-5d36-b98a-e1c7d78ff97b
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

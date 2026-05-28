@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-1413 — Recovery Inhibition (linkc)
-// Status: stable | Level: high | ID: 63a75e0d-db5e-549c-9582-00d037f2369a
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

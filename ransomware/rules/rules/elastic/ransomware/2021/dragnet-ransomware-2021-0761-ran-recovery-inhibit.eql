@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0761 — Recovery Inhibition (mosesstaff)
-// Status: deprecated | Level: high | ID: 0581b980-06ae-56f7-89de-69446a044c08
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

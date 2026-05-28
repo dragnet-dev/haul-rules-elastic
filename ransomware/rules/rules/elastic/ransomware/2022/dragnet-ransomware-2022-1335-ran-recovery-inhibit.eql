@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-1335 — Recovery Inhibition (hive)
-// Status: deprecated | Level: high | ID: 17c3a297-237c-5b97-aac3-660b30360b18
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

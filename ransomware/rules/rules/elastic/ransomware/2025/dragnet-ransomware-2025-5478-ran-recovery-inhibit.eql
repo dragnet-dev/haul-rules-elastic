@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-5478 — Recovery Inhibition (devman)
-// Status: test | Level: high | ID: 84987a2c-53c5-5f04-819b-c2222057ef62
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-1640 — Recovery Inhibition (suncrypt)
-// Status: deprecated | Level: high | ID: f16c26d1-ef9e-54f4-ae73-b1c781a290d3
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-0079 — Recovery Inhibition (play)
-// Status: deprecated | Level: high | ID: 9196fc70-3fb4-5cdf-8484-18e8c33a712f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

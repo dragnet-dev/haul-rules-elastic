@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0653 — Recovery Inhibition (atomsilo)
-// Status: experimental | Level: high | ID: 755e0a05-42a7-5145-b1dd-4f52988198a2
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

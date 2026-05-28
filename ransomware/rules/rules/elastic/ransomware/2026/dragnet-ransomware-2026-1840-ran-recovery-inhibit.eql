@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-1840 — Recovery Inhibition (safepay)
-// Status: stable | Level: high | ID: ffa13185-6639-54c2-a231-9a74f4339731
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

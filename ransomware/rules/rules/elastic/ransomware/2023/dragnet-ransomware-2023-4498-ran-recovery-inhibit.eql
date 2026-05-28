@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-4498 — Recovery Inhibition (clop)
-// Status: experimental | Level: high | ID: 6c16573f-8050-50bf-8043-ac22e150c1c6
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0248 — Recovery Inhibition (pay2key)
-// Status: deprecated | Level: high | ID: 18719037-06a6-5050-b047-eccc82f37991
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

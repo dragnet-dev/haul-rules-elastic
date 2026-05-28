@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-2521 — Recovery Inhibition (exitium)
-// Status: stable | Level: high | ID: bf5da8f9-42fb-50fd-bf69-4007e905f1c4
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

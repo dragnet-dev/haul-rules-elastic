@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-1362 — Recovery Inhibition (aurora)
-// Status: stable | Level: high | ID: 15475742-3c19-5b75-ab79-44b3b017e633
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

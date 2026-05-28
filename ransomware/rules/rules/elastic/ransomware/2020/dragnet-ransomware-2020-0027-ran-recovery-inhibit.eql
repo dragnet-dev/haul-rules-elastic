@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0027 — Recovery Inhibition (mamba)
-// Status: deprecated | Level: high | ID: 312c5f53-f710-5ef4-b825-5f340b721c9c
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

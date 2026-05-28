@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-2754 — Recovery Inhibition (karakurt)
-// Status: experimental | Level: high | ID: b2a34f35-0e87-58a3-8fa7-63caba815896
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

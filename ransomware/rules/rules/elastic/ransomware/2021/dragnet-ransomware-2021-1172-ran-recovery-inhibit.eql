@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-1172 — Recovery Inhibition (dispossessor)
-// Status: experimental | Level: high | ID: 54b189ca-7fc3-5d43-aefe-dbfec7faf29f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

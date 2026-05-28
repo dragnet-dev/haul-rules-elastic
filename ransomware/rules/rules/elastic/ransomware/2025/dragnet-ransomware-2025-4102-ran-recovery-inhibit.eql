@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-4102 — Recovery Inhibition (moneymessage)
-// Status: experimental | Level: high | ID: 8c4dbb10-80ab-503c-a8a9-f94eba5565e5
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

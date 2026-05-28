@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-1850 — Recovery Inhibition (brotherhood)
-// Status: experimental | Level: high | ID: f1304112-4234-53f6-b111-558d7d73a529
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

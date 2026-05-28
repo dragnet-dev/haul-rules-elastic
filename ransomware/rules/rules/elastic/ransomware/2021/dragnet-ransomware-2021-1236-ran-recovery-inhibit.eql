@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-1236 — Recovery Inhibition (revil)
-// Status: deprecated | Level: high | ID: 23e69704-199d-5ee2-a333-c4b110eb778a
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

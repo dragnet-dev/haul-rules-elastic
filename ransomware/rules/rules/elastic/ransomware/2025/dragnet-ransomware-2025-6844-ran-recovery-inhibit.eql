@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-6844 — Recovery Inhibition (desolator)
-// Status: experimental | Level: high | ID: f4cd6802-218c-53c9-8706-4280ecd4b4a1
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-2771 — Recovery Inhibition (bluebox)
-// Status: experimental | Level: high | ID: 1172ed5f-84e4-5f5d-9b79-135ab7e4d063
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

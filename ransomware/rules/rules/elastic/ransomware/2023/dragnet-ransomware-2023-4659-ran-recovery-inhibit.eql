@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-4659 — Recovery Inhibition (vendetta)
-// Status: deprecated | Level: high | ID: 9018b0c8-9dd6-53ed-8ed2-b0db040392e1
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

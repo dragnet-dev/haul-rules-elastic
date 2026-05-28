@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-2591 — Recovery Inhibition (abyss)
-// Status: deprecated | Level: high | ID: 1df4de5a-1dcb-5cb4-9aaa-75c22791e980
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

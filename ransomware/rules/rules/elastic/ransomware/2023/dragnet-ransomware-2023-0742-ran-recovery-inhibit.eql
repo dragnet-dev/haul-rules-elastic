@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-0742 — Recovery Inhibition (noescape)
-// Status: experimental | Level: high | ID: 6cb024ce-5676-500a-b7f5-5142a8b472ee
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

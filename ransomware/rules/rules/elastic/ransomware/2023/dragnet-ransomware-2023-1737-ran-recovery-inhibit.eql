@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-1737 — Recovery Inhibition (siegedsec)
-// Status: experimental | Level: high | ID: 10ebcefe-d2d2-5367-a66e-192cfda02cb6
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

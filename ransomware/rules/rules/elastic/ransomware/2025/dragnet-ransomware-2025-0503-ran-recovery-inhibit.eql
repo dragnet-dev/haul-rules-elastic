@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-0503 — Recovery Inhibition (hellcat)
-// Status: deprecated | Level: high | ID: 802e62ff-464c-57c6-91d9-52cfc07805ab
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

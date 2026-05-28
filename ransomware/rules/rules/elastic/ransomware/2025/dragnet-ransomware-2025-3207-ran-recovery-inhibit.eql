@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-3207 — Recovery Inhibition (VanHelsing)
-// Status: experimental | Level: high | ID: 0f9187b2-62fc-5bc6-9e05-0ac64b03e8f8
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-0401 — Recovery Inhibition (play)
-// Status: experimental | Level: high | ID: 051a0b12-e9f0-5c74-b238-978b1f4bf846
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

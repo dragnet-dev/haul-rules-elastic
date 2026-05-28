@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-1657 — Recovery Inhibition (arkana)
-// Status: deprecated | Level: high | ID: e2e0051c-4c6b-5e2d-8dc1-2e3916168099
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

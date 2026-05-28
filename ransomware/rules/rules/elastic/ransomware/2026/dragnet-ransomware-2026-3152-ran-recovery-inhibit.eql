@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-3152 — Recovery Inhibition (worldleaks)
-// Status: stable | Level: high | ID: ffbf87bd-4f55-571e-8ad5-de91eac43faf
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

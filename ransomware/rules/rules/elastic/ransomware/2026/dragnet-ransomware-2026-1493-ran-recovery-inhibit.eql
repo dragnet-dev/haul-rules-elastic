@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-1493 — Recovery Inhibition (payload)
-// Status: stable | Level: high | ID: 859b0d0c-7651-5987-8ea0-b4645a28f588
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

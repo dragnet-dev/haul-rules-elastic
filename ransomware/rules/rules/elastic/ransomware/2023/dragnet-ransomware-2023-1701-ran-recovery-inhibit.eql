@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-1701 — Recovery Inhibition (ragnarlocker)
-// Status: experimental | Level: high | ID: d5da285e-73b8-5e75-bcf9-a1d6de5179e8
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

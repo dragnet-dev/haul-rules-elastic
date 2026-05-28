@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-2378 — Recovery Inhibition (tengu)
-// Status: stable | Level: high | ID: 45f39f55-5d00-5327-ab1a-3f84b366d8ba
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

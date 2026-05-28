@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-6325 — Recovery Inhibition (pear)
-// Status: experimental | Level: high | ID: 70056866-85a2-5e96-a592-e1c8c65f822f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

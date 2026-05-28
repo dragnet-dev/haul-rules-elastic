@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-1522 — Recovery Inhibition (kittykatkrew)
-// Status: stable | Level: high | ID: 3f609bc9-f48a-51ee-b6b0-dfe47c8ac32d
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

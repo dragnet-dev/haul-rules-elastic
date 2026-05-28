@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-4339 — Recovery Inhibition (babuk2)
-// Status: experimental | Level: high | ID: 485e63bf-45fb-5b95-ae8c-f50300f6d557
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

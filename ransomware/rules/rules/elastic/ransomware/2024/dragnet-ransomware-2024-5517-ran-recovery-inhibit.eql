@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-5517 — Recovery Inhibition (blacklock)
-// Status: experimental | Level: high | ID: 8d237af0-e34d-5318-852d-1c4f88ea25ad
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

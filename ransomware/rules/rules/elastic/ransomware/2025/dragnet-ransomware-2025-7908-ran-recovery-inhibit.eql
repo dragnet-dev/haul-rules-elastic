@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-7908 — Recovery Inhibition (BrainCipher)
-// Status: experimental | Level: high | ID: 84ed427e-cf61-5932-b9be-9d727424c111
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

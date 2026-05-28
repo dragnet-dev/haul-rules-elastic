@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-2483 — Recovery Inhibition (blackbasta)
-// Status: deprecated | Level: high | ID: b09ecdba-50a1-5067-9a8c-db3e4d78139b
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

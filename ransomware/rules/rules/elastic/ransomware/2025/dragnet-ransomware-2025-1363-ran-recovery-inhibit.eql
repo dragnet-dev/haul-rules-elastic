@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-1363 — Recovery Inhibition (chaos)
-// Status: experimental | Level: high | ID: 789305cc-df09-58f1-994b-b8fed8bf7490
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

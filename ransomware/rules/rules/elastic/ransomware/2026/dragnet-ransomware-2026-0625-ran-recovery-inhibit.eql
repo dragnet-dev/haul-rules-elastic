@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0625 — Recovery Inhibition (blackwater)
-// Status: stable | Level: high | ID: 8e144180-beb3-5f63-86b8-2a6cc7bdcf3d
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

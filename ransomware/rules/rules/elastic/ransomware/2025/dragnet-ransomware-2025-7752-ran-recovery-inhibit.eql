@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-7752 — Recovery Inhibition (direwolf)
-// Status: experimental | Level: high | ID: d40ba968-80ae-5d55-ba61-94c00441ac68
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

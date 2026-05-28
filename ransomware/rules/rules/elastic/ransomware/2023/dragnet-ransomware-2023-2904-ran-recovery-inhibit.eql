@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-2904 — Recovery Inhibition (mallox)
-// Status: experimental | Level: high | ID: 4ef590ae-bc31-55cd-a9d1-236a331db834
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

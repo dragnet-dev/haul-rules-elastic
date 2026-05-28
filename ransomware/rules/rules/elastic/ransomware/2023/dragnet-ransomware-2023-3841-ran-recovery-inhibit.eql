@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-3841 — Recovery Inhibition (trigona)
-// Status: experimental | Level: high | ID: 25d6c161-eb0c-5a64-9bbb-c4575a62271c
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

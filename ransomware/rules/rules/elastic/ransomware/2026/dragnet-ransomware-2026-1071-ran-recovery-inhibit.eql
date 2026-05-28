@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-1071 — Recovery Inhibition (thegentlemen)
-// Status: test | Level: high | ID: 3c8d1803-0657-5c4f-9d59-96c6a9de7055
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

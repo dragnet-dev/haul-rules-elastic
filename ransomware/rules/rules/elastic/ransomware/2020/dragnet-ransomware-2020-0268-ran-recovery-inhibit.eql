@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0268 — Recovery Inhibition (babuk)
-// Status: deprecated | Level: high | ID: dcb83e44-abaa-5fe1-99c9-174f0810fffe
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

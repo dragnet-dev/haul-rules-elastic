@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-0774 — Recovery Inhibition (donutleaks)
-// Status: experimental | Level: high | ID: cbaf2312-37ea-5ded-84b8-806b27ddb328
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-1931 — Recovery Inhibition (shinyhunters)
-// Status: deprecated | Level: high | ID: 0825e0f6-7916-56f1-93a1-bef962af0e03
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

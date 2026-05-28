@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-5821 — Recovery Inhibition (frag)
-// Status: deprecated | Level: high | ID: af467d65-e2a1-587c-998f-fdc19f2f0128
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

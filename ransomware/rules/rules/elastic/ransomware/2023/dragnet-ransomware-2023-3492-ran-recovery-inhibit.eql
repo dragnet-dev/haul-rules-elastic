@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-3492 — Recovery Inhibition (malekteam)
-// Status: experimental | Level: high | ID: a89f4661-8303-5053-a859-61aa263d4964
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

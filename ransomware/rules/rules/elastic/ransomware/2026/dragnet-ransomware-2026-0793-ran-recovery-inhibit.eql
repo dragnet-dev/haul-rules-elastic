@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0793 — Recovery Inhibition (ms13089)
-// Status: stable | Level: high | ID: 41e64d36-b815-5f1d-af1e-3340081fdf55
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

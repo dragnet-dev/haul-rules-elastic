@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0684 — Recovery Inhibition (nightspire)
-// Status: deprecated | Level: high | ID: da714b85-7cec-5e20-b080-ec950181d54d
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

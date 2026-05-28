@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-1909 — Recovery Inhibition (midas)
-// Status: deprecated | Level: high | ID: b0df3fd2-358d-5e02-aa19-3d54a55f8ecc
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

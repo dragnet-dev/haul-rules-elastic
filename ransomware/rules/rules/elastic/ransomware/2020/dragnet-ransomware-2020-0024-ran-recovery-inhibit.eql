@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0024 — Recovery Inhibition (maze)
-// Status: deprecated | Level: high | ID: 40b08a51-b9f8-549c-b728-e7ec2921aef9
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

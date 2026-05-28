@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-1562 — Recovery Inhibition (snatch)
-// Status: deprecated | Level: high | ID: 1f52ed77-524d-5d79-935f-6f83d15650e1
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

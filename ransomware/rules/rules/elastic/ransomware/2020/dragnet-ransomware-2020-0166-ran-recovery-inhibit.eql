@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2020-0166 — Recovery Inhibition (netwalker)
-// Status: deprecated | Level: high | ID: cd99eff5-bedf-5376-86ae-7aa5bc5b92fb
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-4351 — Recovery Inhibition (medusa)
-// Status: test | Level: high | ID: 8e18ae8c-f2bd-5dc6-941e-b36e56dc9f5c
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

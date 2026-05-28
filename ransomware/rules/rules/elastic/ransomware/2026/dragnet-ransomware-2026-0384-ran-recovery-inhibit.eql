@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0384 — Recovery Inhibition (bravox)
-// Status: test | Level: high | ID: a2c7adbd-c6bc-560b-b082-ce6e52c7cfc8
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

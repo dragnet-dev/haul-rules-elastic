@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-4752 — Recovery Inhibition (stormous)
-// Status: deprecated | Level: high | ID: e0b2c75e-c6ad-5a21-9f9e-a691dda93f58
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

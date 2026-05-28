@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-3860 — Recovery Inhibition (nova)
-// Status: experimental | Level: high | ID: bcbd686b-d7fd-568d-8386-6192e4363dc7
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

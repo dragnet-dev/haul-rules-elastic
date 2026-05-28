@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0793 — Recovery Inhibition (blackbyte)
-// Status: deprecated | Level: high | ID: fafa1e25-d231-53e4-9637-4e91aa47ba2f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

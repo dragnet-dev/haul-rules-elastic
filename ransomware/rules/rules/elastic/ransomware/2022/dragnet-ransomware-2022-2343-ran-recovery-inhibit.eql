@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-2343 — Recovery Inhibition (everest)
-// Status: deprecated | Level: high | ID: 82550602-fc02-503a-9c46-1810fb8e4e26
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

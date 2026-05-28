@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-4571 — Recovery Inhibition (trigona)
-// Status: experimental | Level: high | ID: d9995867-4428-5fb7-a6fb-0abd36a59217
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

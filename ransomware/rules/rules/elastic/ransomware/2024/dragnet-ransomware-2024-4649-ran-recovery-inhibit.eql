@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-4649 — Recovery Inhibition (ValenciaLeaks)
-// Status: experimental | Level: high | ID: 4e071420-0357-50a5-b5ef-d075630e1f01
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

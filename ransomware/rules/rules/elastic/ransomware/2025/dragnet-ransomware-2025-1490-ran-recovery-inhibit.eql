@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-1490 — Recovery Inhibition (threeam)
-// Status: experimental | Level: high | ID: a0a3537e-ad0a-56e3-8f3f-0b2e93d8d7d3
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

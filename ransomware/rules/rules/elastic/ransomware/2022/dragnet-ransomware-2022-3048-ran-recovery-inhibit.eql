@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2022-3048 — Recovery Inhibition (suncrypt)
-// Status: deprecated | Level: high | ID: 047e9aed-e95b-5400-83df-8a4a014d5102
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

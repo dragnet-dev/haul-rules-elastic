@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-2663 — Recovery Inhibition (qilin)
-// Status: deprecated | Level: high | ID: 334bb0ad-e3e2-5b8c-a73d-56cd4410690f
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

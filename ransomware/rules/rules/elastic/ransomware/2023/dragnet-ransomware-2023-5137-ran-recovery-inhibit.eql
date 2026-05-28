@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-5137 — Recovery Inhibition (vicesociety)
-// Status: deprecated | Level: high | ID: 33d7b865-7c2c-532e-8ebf-97413114d259
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

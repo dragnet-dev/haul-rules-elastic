@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-2292 — Recovery Inhibition (weyhro)
-// Status: experimental | Level: high | ID: 27a2bf60-52d1-5010-ae5f-496e48dc5a85
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

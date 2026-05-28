@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-0542 — Recovery Inhibition (threeam)
-// Status: experimental | Level: high | ID: 39a8eb9d-996b-5dd0-aab3-acfccbd832aa
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-1786 — Recovery Inhibition (groove)
-// Status: deprecated | Level: high | ID: 7afcc568-9281-537f-b58a-e87be0760717
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

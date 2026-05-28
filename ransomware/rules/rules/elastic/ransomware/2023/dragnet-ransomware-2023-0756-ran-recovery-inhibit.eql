@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-0756 — Recovery Inhibition (snatch)
-// Status: experimental | Level: high | ID: 9984bad1-8dca-5456-b4c2-b2ebfab47260
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

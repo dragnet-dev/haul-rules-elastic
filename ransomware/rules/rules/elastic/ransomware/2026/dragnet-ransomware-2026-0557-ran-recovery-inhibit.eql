@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0557 — Recovery Inhibition (beast)
-// Status: test | Level: high | ID: a8b1aec6-595c-5824-acd2-ff3b4d76266d
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

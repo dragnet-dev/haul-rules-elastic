@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0722 — Recovery Inhibition (avaddon)
-// Status: deprecated | Level: high | ID: 8d986da2-5160-5c92-a7e0-6f844f0f51e9
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

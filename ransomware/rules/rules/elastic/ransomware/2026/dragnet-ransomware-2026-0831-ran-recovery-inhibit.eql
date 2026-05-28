@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-0831 — Recovery Inhibition (payoutsking)
-// Status: stable | Level: high | ID: 0e457fc8-6a7a-52fe-8d68-88961c01b218
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

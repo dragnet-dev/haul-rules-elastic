@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-0155 — Recovery Inhibition (metaencryptor)
-// Status: experimental | Level: high | ID: 22683275-1a13-5ad6-bd91-ee0014975953
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

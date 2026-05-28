@@ -1,5 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-3136 — Mass File Rename (lockbit3)
-// Status: experimental | Level: high | ID: 86f92643-2de0-5c8f-b772-6600e317c6ca
-
-any where
-  (file.path like~ "*.encrypted" or file.path like~ "*.locked" or file.path like~ "*.ransom")

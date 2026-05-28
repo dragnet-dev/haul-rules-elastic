@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-4858 — Recovery Inhibition (toufan)
-// Status: deprecated | Level: high | ID: 5b1e7ea9-553a-5edf-bc3c-6cd7a8230792
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

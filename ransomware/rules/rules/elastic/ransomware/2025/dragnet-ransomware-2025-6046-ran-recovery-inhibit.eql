@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-6046 — Recovery Inhibition (nitrogen)
-// Status: experimental | Level: high | ID: ff62a09f-d75a-5aee-8cd3-ea64331d93a3
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

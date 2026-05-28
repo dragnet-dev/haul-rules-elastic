@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2024-2571 — Recovery Inhibition (meow)
-// Status: experimental | Level: high | ID: ab4ccaf8-cf6e-5852-afa8-755f9fbf5dad
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

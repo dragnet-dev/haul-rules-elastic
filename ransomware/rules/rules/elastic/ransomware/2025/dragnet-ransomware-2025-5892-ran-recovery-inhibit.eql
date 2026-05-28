@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2025-5892 — Recovery Inhibition (SilentRansomGroup)
-// Status: deprecated | Level: high | ID: c81d189d-c359-5d42-9dc2-3cfee6da6cc3
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

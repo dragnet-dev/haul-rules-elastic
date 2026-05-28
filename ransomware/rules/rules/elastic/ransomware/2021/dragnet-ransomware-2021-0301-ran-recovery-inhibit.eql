@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2021-0301 — Recovery Inhibition (pay2key)
-// Status: deprecated | Level: high | ID: 1467b2c4-8fdb-5be0-80f2-8c1d672645ab
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

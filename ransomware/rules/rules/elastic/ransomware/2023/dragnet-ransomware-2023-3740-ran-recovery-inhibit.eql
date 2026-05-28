@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2023-3740 — Recovery Inhibition (cryptbb)
-// Status: experimental | Level: high | ID: d662de9e-b8dc-5bbc-96b5-3e09074d8055
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")

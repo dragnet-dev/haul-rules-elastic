@@ -1,6 +1,0 @@
-// Dragnet [Ransomware]: dragnet-ransomware-2026-3095 — Recovery Inhibition (securotrop)
-// Status: stable | Level: high | ID: 13ce7386-6f5b-5417-96b5-c73503e2bde1
-
-process where
-  ((process.command_line like~ "*recoveryenabled no*" or process.command_line like~ "*bootstatuspolicy ignoreallfailures*")) and
-  (process.executable like~ "*\bcdedit.exe")
